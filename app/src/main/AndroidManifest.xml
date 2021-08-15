@@ -10,6 +10,54 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Easykit">
         <activity
+            android:name=".UbicacionTiendaActivity"
+            android:exported="true" />
+        <activity
+            android:name=".AgregarProductoActivity"
+            android:exported="true" />
+        <activity
+            android:name=".ModificarProductoActivity"
+            android:exported="true" />
+        <activity
+            android:name=".ProteccionPagoActivity"
+            android:exported="true" />
+        <activity
+            android:name=".PagoActivity"
+            android:exported="true" />
+        <activity
+            android:name=".DespliegueTematicasActivity"
+            android:exported="true" />
+        <activity
+            android:name=".CalificacionProductosActivity"
+            android:exported="true" />
+        <activity
+            android:name=".SideBarMenuActivity"
+            android:exported="true" />
+        <activity
+            android:name=".DetallesProductoActivity"
+            android:exported="true" />
+        <activity
+            android:name=".CatalogoActivity"
+            android:exported="true" />
+        <activity
+            android:name=".ChatVendedoresActivity"
+            android:exported="true" />
+        <activity
+            android:name=".ActualizarPerfilActivity"
+            android:exported="true" />
+        <activity
+            android:name=".AutenticacionActivity"
+            android:exported="true" />
+        <activity
+            android:name=".RegistroActivity"
+            android:exported="true" />
+        <activity
+            android:name=".IngresoActivity"
+            android:exported="true" />
+        <activity
+            android:name=".PreguntasProductoActivity"
+            android:exported="true" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
