@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">easykit</string>
+    <string name="registro">Registro</string>
+    <string name="ingreso">Ingreso</string>
+    <string name="nombre">Nombre</string>
+    <string name="apellido">Apellido</string>
+    <string name="password">Password</string>
+    <string name="correo">Correo Electronico</string>
+    <string name="guardarCambios">Guardar Cambios</string>
+    <string name="cambiarFotoPerfil">Cambiar foto de perfil</string>
+    <string name="nuevaContrasenna">Nueva Contraseña</string>
+    <string name="confirmarContrasenna">Confirmar Contraseña</string>
 </resources>
