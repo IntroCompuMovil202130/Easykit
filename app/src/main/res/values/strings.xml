@@ -10,4 +10,7 @@
     <string name="cambiarFotoPerfil">Cambiar foto de perfil</string>
     <string name="nuevaContrasenna">Nueva Contraseña</string>
     <string name="confirmarContrasenna">Confirmar Contraseña</string>
+    <string name="gato">Foto de gato</string>
+    <string name="logo">Foto de logo</string>
+    <string name="fotoPerfil">Foto de perfil</string>
 </resources>

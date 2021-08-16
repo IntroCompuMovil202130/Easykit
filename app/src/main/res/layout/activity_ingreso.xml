@@ -9,7 +9,7 @@
     <EditText
         android:id="@+id/textCorreoIngreso"
         android:layout_width="210dp"
-        android:layout_height="40dp"
+        android:layout_height="48dp"
         android:background="@drawable/roundedtext"
         android:ems="10"
         android:hint="@string/correo"
@@ -25,14 +25,13 @@
     <Button
         android:id="@+id/buttonIngresoIngreso"
         android:layout_width="180dp"
-        android:layout_height="40dp"
+        android:layout_height="48dp"
         android:layout_marginBottom="60dp"
-        android:text="@string/ingreso"
         android:background="@drawable/roundedtext"
+        android:text="@string/ingreso"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <ImageView
         android:id="@+id/imagenGato"
@@ -41,16 +40,17 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/gatito" />
+        app:srcCompat="@drawable/gatito"
+        android:contentDescription="@string/gato" />
 
     <EditText
         android:id="@+id/textPasswordIngreso"
         android:layout_width="210dp"
-        android:layout_height="40dp"
+        android:layout_height="48dp"
         android:layout_marginBottom="100dp"
         android:background="@drawable/roundedtext"
         android:ems="10"
-        android:hint="Password"
+        android:hint="@string/password"
         android:inputType="textPassword"
         android:textAlignment="center"
         app:layout_constraintBottom_toTopOf="@+id/buttonIngresoIngreso"
