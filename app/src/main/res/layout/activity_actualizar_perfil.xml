@@ -22,7 +22,6 @@
         android:layout_width="wrap_content"
         android:layout_height="48dp"
         android:layout_marginTop="60dp"
-        android:background="@drawable/roundedtext"
         android:ems="10"
         android:hint="@string/nombre"
         android:inputType="textPersonName"
@@ -37,7 +36,6 @@
         android:layout_width="wrap_content"
         android:layout_height="48dp"
         android:layout_marginTop="24dp"
-        android:background="@drawable/roundedtext"
         android:ems="10"
         android:hint="@string/apellido"
         android:inputType="textPersonName"
@@ -52,7 +50,6 @@
         android:layout_width="wrap_content"
         android:layout_height="48dp"
         android:layout_marginTop="52dp"
-        android:background="@drawable/roundedtext"
         android:ems="10"
         android:hint="@string/correo"
         android:inputType="textPersonName"
@@ -60,14 +57,15 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName2" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName2"
+        android:background="@drawable/roundedbutton"
+        />
 
     <EditText
         android:id="@+id/editTextTextPersonName4"
         android:layout_width="wrap_content"
         android:layout_height="48dp"
         android:layout_marginTop="36dp"
-        android:background="@drawable/roundedtext"
         android:ems="10"
         android:hint="@string/nuevaContrasenna"
         android:inputType="textPersonName"
@@ -75,14 +73,15 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName3" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName3"
+        android:background="@drawable/roundedbutton"
+        />
 
     <EditText
         android:id="@+id/editTextTextPersonName5"
         android:layout_width="wrap_content"
         android:layout_height="48dp"
         android:layout_marginTop="36dp"
-        android:background="@drawable/roundedtext"
         android:ems="10"
         android:hint="@string/confirmarContrasenna"
         android:inputType="textPersonName"
@@ -90,18 +89,21 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName4" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName4"
+        android:background="@drawable/roundedbutton"
+        />
 
     <Button
         android:id="@+id/button"
         android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="20dp"
-        android:background="@drawable/roundedbuttons"
         android:text="@string/cambiarFotoPerfil"
         app:layout_constraintBottom_toTopOf="@+id/button2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        android:background="@drawable/roundedbutton"
+        />
 
     <Button
         android:id="@+id/button2"
@@ -109,9 +111,10 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="32dp"
         android:text="@string/guardarCambios"
-        android:background="@drawable/roundedbuttons"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        android:background="@drawable/roundedbutton"
+        />
 </androidx.constraintlayout.widget.ConstraintLayout>
