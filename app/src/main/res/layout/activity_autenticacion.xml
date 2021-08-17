@@ -4,23 +4,23 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="20dp"
     tools:context=".IngresoActivity">
 
     <EditText
         android:id="@+id/textCorreoIngreso"
         android:layout_width="210dp"
         android:layout_height="48dp"
+        android:layout_marginTop="64dp"
         android:background="@drawable/roundedbutton"
         android:ems="10"
         android:hint="@string/correo"
         android:inputType="textPersonName"
         android:textAlignment="center"
-        app:layout_constraintBottom_toTopOf="@+id/textPasswordIngreso"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imagenGato"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toBottomOf="@+id/imagenGato" />
 
     <Button
         android:id="@+id/buttonIngresoIngreso"
@@ -35,10 +35,15 @@
 
     <ImageView
         android:id="@+id/imagenGato"
-        android:layout_width="250dp"
-        android:layout_height="414dp"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_marginTop="64dp"
+        android:adjustViewBounds="true"
         android:contentDescription="@string/gato"
+        android:paddingTop="90dp"
+        android:scaleType="centerCrop"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/gatito" />
@@ -47,14 +52,14 @@
         android:id="@+id/textPasswordIngreso"
         android:layout_width="210dp"
         android:layout_height="48dp"
-        android:layout_marginBottom="100dp"
+        android:layout_marginTop="32dp"
         android:background="@drawable/roundedbutton"
         android:ems="10"
         android:hint="@string/password"
         android:inputType="textPassword"
         android:textAlignment="center"
-        app:layout_constraintBottom_toTopOf="@+id/buttonIngresoIngreso"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.502"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textCorreoIngreso" />
 </androidx.constraintlayout.widget.ConstraintLayout>
