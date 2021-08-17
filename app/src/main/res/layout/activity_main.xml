@@ -6,41 +6,4 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="410dp"
-        android:layout_height="386dp"
-        app:layout_constraintBottom_toTopOf="@+id/botonRegistroMain"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/logo"
-        android:paddingBottom="100dp"
-        android:contentDescription="@string/logo" />
-
-    <Button
-        android:id="@+id/botonIngresoMain"
-        android:layout_width="180dp"
-        android:layout_height="48dp"
-        android:layout_margin="50dp"
-        android:text="@string/ingreso"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        android:background="@drawable/roundedbutton"
-        />
-
-    <Button
-        android:id="@+id/botonRegistroMain"
-        android:layout_width="180dp"
-        android:layout_height="48dp"
-        android:layout_margin="30dp"
-        android:text="@string/registro"
-        app:layout_constraintBottom_toTopOf="@+id/botonIngresoMain"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        android:background="@drawable/roundedbutton"
-        />
-
-
 </androidx.constraintlayout.widget.ConstraintLayout>
