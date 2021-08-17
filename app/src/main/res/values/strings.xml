@@ -13,4 +13,21 @@
     <string name="gato">Foto de gato</string>
     <string name="logo">Foto de logo</string>
     <string name="fotoPerfil">Foto de perfil</string>
+    <string name="venta">Venta</string>
+    <string name="actualizar">Actualizar</string>
+    <string name="name">Nombre del producto: </string>
+    <string name="name2">Kit escolar</string>
+    <string name="button">Publicar</string>
+    <string name="buttonGuardar">Guardar</string>
+    <string name="buttonCancelar">Cancelar</string>
+    <string name="buttonQuitar">Quitar foto</string>
+    <string name="hint">Nombre</string>
+    <string name="hint2">Descripción</string>
+    <string name="description">Descripción del producto</string>
+    <string name="description2">Kit escolar perfecto para colegio</string>
+    <string name="precio">Precio: </string>
+    <string name="precio2">COP $ </string>
+    <string name="precio3">COP $35.000 </string>
+    <string name="foto">Adjuntar foto</string>
+    <string name="title_activity_maps">MapsActivity</string>
 </resources>

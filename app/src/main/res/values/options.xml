@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="tematicas">
+
+        <item>Temáticas</item>
+        <item>Manualidades</item>
+        <item>Colegio</item>
+        <item>Navideño</item>
+        <item>Halloween</item>
+        <item>Verano</item>
+
+    </string-array>
+
+</resources>
