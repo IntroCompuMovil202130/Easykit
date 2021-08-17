@@ -93,6 +93,12 @@
                 android:layout_margin="10dp"
                 android:text="Nueva tarjeta de crédito" />
 
+            <View
+                android:id="@+id/divider"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="?android:attr/listDivider" />
+
             <RadioButton
                 android:id="@+id/radioButton3"
                 android:layout_width="match_parent"
@@ -100,12 +106,24 @@
                 android:layout_margin="10dp"
                 android:text="Nueva tarjeta de débito" />
 
+            <View
+                android:id="@+id/divider2"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="?android:attr/listDivider" />
+
             <RadioButton
                 android:id="@+id/radioButton2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
                 android:text="Transferencia desde tu banco con PSE" />
+
+            <View
+                android:id="@+id/divider5"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="?android:attr/listDivider" />
 
             <RadioButton
                 android:id="@+id/radioButton5"
