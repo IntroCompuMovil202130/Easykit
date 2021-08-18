@@ -13,6 +13,7 @@
     <string name="gato">Foto de gato</string>
     <string name="logo">Foto de logo</string>
     <string name="fotoPerfil">Foto de perfil</string>
+    <string name="buscar">Buscar </string>
     <string name="venta">Venta</string>
     <string name="actualizar">Actualizar</string>
     <string name="name">Nombre del producto: </string>
@@ -35,4 +36,6 @@
     <string name="textUbicacion">Encuéntranos!</string>
     <string name="textUbicacion2">Aquí podrás encontrar nuestras tiendas con disponibilidad del producto que buscas.</string>
     <string name="title_activity_maps">MapsActivity</string>
+    <string name="TituloKit">PRÁCTICO. PVP $18K</string>
+    <string name="BtnPDC">Comprar</string>
 </resources>
