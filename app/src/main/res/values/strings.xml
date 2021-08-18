@@ -13,4 +13,5 @@
     <string name="gato">Foto de gato</string>
     <string name="logo">Foto de logo</string>
     <string name="fotoPerfil">Foto de perfil</string>
+    <string name="buscar">Buscar </string>
 </resources>
