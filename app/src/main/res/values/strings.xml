@@ -35,4 +35,6 @@
     <string name="textUbicacion">Encuéntranos!</string>
     <string name="textUbicacion2">Aquí podrás encontrar nuestras tiendas con disponibilidad del producto que buscas.</string>
     <string name="title_activity_maps">MapsActivity</string>
+    <string name="TituloKit">PRÁCTICO. PVP $18K</string>
+    <string name="BtnPDC">Comprar</string>
 </resources>
