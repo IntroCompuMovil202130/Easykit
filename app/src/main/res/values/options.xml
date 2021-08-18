@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="tematicas">
+
+        <item>Temáticas</item>
+        <item>Manualidades</item>
+        <item>Colegio</item>
+        <item>Navideño</item>
+        <item>Halloween</item>
+        <item>Verano</item>
+
+    </string-array>
+
+
+    <string-array name="Articulos">
+
+        <item>1 grapadora pequeña y sus grapas</item>
+        <item>1 lapiz Hb Bic</item>
+        <item>4 Marcadores Stabilo.</item>
+        <item>1 portacelo + celo</item>
+        <item>1 bloc notas adhesivas</item>
+        <item>1 quitagrapas</item>
+        <item>1 regla 20cm</item>
+        <item>1 sacapuntas</item>
+        <item>1 tijeras</item>
+        <item>1 corrector en cinta</item>
+        <item>Caja de cartón y decoración</item>
+
+    </string-array>
+</resources>
