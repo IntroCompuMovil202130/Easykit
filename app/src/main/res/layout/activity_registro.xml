@@ -8,88 +8,85 @@
 
     <ImageView
         android:id="@+id/imagenLogo"
-        android:layout_width="335dp"
-        android:layout_height="261dp"
-        app:layout_constraintBottom_toTopOf="@+id/textNombre"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_marginTop="36dp"
+        android:contentDescription="@string/logo"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/logo"
-        android:contentDescription="@string/logo" />
+        app:srcCompat="@drawable/logo" />
 
     <Button
         android:id="@+id/botonRegistro"
         android:layout_width="180dp"
         android:layout_height="48dp"
         android:layout_marginBottom="32dp"
+        android:background="@drawable/roundedbutton"
         android:text="@string/registro"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        android:background="@drawable/roundedbutton"/>
+        app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
         android:id="@+id/textPassword"
         android:layout_width="210dp"
         android:layout_height="48dp"
-        android:layout_marginBottom="100dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/roundedbutton"
         android:ems="10"
         android:hint="@string/password"
         android:inputType="textPassword"
         android:textAlignment="center"
-        app:layout_constraintBottom_toTopOf="@+id/botonRegistro"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        android:background="@drawable/roundedbutton"
-        />
+        app:layout_constraintTop_toBottomOf="@+id/textCorreo" />
 
     <EditText
         android:id="@+id/textNombre"
         android:layout_width="210dp"
         android:layout_height="48dp"
-        android:layout_marginBottom="30dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/roundedbutton"
         android:ems="10"
         android:hint="@string/nombre"
         android:inputType="textPersonName"
         android:textAlignment="center"
-        app:layout_constraintBottom_toTopOf="@+id/textApellido"
+
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.502"
-
         app:layout_constraintStart_toStartOf="parent"
-        android:background="@drawable/roundedbutton"
-        />
+        app:layout_constraintTop_toBottomOf="@+id/imagenLogo" />
 
     <EditText
         android:id="@+id/textApellido"
         android:layout_width="210dp"
         android:layout_height="48dp"
-        android:layout_marginBottom="30dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/roundedbutton"
         android:ems="10"
         android:hint="@string/apellido"
         android:inputType="textPersonName"
-        android:textAlignment="center"
-        app:layout_constraintBottom_toTopOf="@+id/textCorreo"
-        app:layout_constraintEnd_toEndOf="parent"
 
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        android:background="@drawable/roundedbutton"
-        />
+        app:layout_constraintTop_toBottomOf="@+id/textNombre" />
 
     <EditText
         android:id="@+id/textCorreo"
         android:layout_width="210dp"
         android:layout_height="48dp"
-        android:layout_marginBottom="30dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/roundedbutton"
         android:ems="10"
         android:hint="@string/correo"
         android:inputType="textPersonName"
-        android:textAlignment="center"
-        app:layout_constraintBottom_toTopOf="@+id/textPassword"
-        app:layout_constraintEnd_toEndOf="parent"
 
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        android:background="@drawable/roundedbutton"
-        />
+        app:layout_constraintTop_toBottomOf="@+id/textApellido" />
 </androidx.constraintlayout.widget.ConstraintLayout>
