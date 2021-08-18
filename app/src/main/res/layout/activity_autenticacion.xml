@@ -8,7 +8,7 @@
     tools:context=".IngresoActivity">
 
     <EditText
-        android:id="@+id/textCorreoIngreso"
+        android:id="@+id/ETCorreoAutenticacion"
         android:layout_width="210dp"
         android:layout_height="48dp"
         android:layout_marginTop="64dp"
@@ -22,8 +22,23 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imagenGato" />
 
+    <EditText
+        android:id="@+id/ETContrasenaAutenticacion"
+        android:layout_width="210dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/roundedbutton"
+        android:ems="10"
+        android:hint="@string/contrase_a"
+        android:inputType="textPassword"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ETCorreoAutenticacion" />
+
     <Button
-        android:id="@+id/buttonIngresoIngreso"
+        android:id="@+id/BIngresoAutenticacion"
         android:layout_width="180dp"
         android:layout_height="48dp"
         android:layout_marginBottom="60dp"
@@ -48,18 +63,4 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/gatito" />
 
-    <EditText
-        android:id="@+id/textPasswordIngreso"
-        android:layout_width="210dp"
-        android:layout_height="48dp"
-        android:layout_marginTop="32dp"
-        android:background="@drawable/roundedbutton"
-        android:ems="10"
-        android:hint="@string/password"
-        android:inputType="textPassword"
-        android:textAlignment="center"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.502"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textCorreoIngreso" />
 </androidx.constraintlayout.widget.ConstraintLayout>

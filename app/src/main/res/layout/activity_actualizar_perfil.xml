@@ -7,48 +7,50 @@
     tools:context=".ActualizarPerfilActivity">
 
     <ImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/IVfotoPerfil"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:layout_marginEnd="20dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="16dp"
         android:contentDescription="@string/fotoPerfil"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:srcCompat="@tools:sample/avatars" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName"
+        android:id="@+id/ETNombresActualizar"
         android:layout_width="wrap_content"
         android:layout_height="48dp"
         android:layout_marginTop="60dp"
         android:background="@drawable/roundedbutton"
         android:ems="10"
-        android:hint="@string/nombre"
+        android:hint="@string/nombres"
         android:inputType="textPersonName"
         android:textAlignment="center"
-        app:layout_constraintEnd_toStartOf="@+id/imageView2"
+        app:layout_constraintEnd_toStartOf="@+id/IVfotoPerfil"
         app:layout_constraintHorizontal_bias="0.471"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName2"
+        android:id="@+id/ETApellidosActualizar"
         android:layout_width="wrap_content"
         android:layout_height="48dp"
         android:layout_marginTop="24dp"
         android:background="@drawable/roundedbutton"
         android:ems="10"
-        android:hint="@string/apellido"
+        android:hint="@string/apellidos"
+        android:hintTextColor="#757575"
         android:inputType="textPersonName"
         android:textAlignment="center"
-        app:layout_constraintEnd_toStartOf="@+id/imageView2"
+        app:layout_constraintEnd_toStartOf="@+id/IVfotoPerfil"
         app:layout_constraintHorizontal_bias="0.471"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName" />
+        app:layout_constraintTop_toBottomOf="@+id/ETNombresActualizar"
+        tools:ignore="TextContrastCheck" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName3"
+        android:id="@+id/ETCorreoActualizar"
         android:layout_width="wrap_content"
         android:layout_height="48dp"
         android:layout_marginTop="52dp"
@@ -60,10 +62,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName2" />
+        app:layout_constraintTop_toBottomOf="@+id/ETApellidosActualizar" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName4"
+        android:id="@+id/ETContraActualizar"
         android:layout_width="wrap_content"
         android:layout_height="48dp"
         android:layout_marginTop="36dp"
@@ -75,10 +77,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName3" />
+        app:layout_constraintTop_toBottomOf="@+id/ETCorreoActualizar" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName5"
+        android:id="@+id/ETConfirmarContraActualizar"
         android:layout_width="wrap_content"
         android:layout_height="48dp"
         android:layout_marginTop="36dp"
@@ -90,22 +92,22 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName4" />
+        app:layout_constraintTop_toBottomOf="@+id/ETContraActualizar" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/BCambiarFotoActualizar"
         android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="20dp"
         android:background="@drawable/roundedbutton"
         android:text="@string/cambiarFotoPerfil"
         android:textColor="#FFFFFF"
-        app:layout_constraintBottom_toTopOf="@+id/button2"
+        app:layout_constraintBottom_toTopOf="@+id/BGuardarCambiosActualizar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/BGuardarCambiosActualizar"
         android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="32dp"
@@ -115,5 +117,6 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="TextContrastCheck" />
 </androidx.constraintlayout.widget.ConstraintLayout>

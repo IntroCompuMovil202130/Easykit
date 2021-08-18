@@ -15,7 +15,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <com.mikhaellopez.circularimageview.CircularImageView
-            android:id="@+id/circularImageView"
+            android:id="@+id/CIVProductoCalificar"
             android:layout_width="300dp"
             android:layout_height="300dp"
             app:civ_shadow_color="#3f51b5"
@@ -26,15 +26,15 @@
             tools:ignore="MissingConstraints" />
 
         <TextView
-            android:id="@+id/textView15"
+            android:id="@+id/TVNombreProductoCalificar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="31dp"
-            android:text="NOMBRE DEL PRODUCTO"
+            android:text="@string/nombre_del_producto"
             android:textAppearance="@style/TextAppearance.AppCompat.Large"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/circularImageView" />
+            app:layout_constraintTop_toBottomOf="@+id/CIVProductoCalificar" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -45,23 +45,23 @@
         app:layout_constraintTop_toBottomOf="@+id/constraintLayout">
 
         <TextView
-            android:id="@+id/textView16"
+            android:id="@+id/CuantasEstrellas"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="¿Cuántas estrellas le darías?"
+            android:text="@string/cu_ntas_estrellas_le_dar_as"
             android:textAppearance="@style/TextAppearance.AppCompat.Large"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <RatingBar
-            android:id="@+id/ratingBar"
+            android:id="@+id/ratingBarCalificar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView16" />
+            app:layout_constraintTop_toBottomOf="@+id/CuantasEstrellas" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -72,10 +72,10 @@
         app:layout_constraintBottom_toBottomOf="parent">
 
         <TextView
-            android:id="@+id/textView17"
+            android:id="@+id/ComoFueAtencion"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="¿Cómo fue la atención recibida?"
+            android:text="@string/c_mo_fue_la_atenci_n_recibida"
             android:textAppearance="@style/TextAppearance.AppCompat.Large"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -89,10 +89,10 @@
             android:layout_weight="2"
             android:gravity="center"
             android:orientation="horizontal"
-            app:layout_constraintTop_toBottomOf="@+id/textView17">
+            app:layout_constraintTop_toBottomOf="@+id/ComoFueAtencion">
 
             <ImageView
-                android:id="@+id/imageView23"
+                android:id="@+id/IVTristeCalificar"
                 android:layout_width="80dp"
                 android:layout_height="80dp"
                 android:layout_marginStart="10dp"
@@ -101,7 +101,7 @@
                 app:srcCompat="@drawable/outline_sentiment_dissatisfied_black_48dp" />
 
             <ImageView
-                android:id="@+id/imageView22"
+                android:id="@+id/IVRegularCalificar"
                 android:layout_width="80dp"
                 android:layout_height="80dp"
                 android:layout_marginStart="10dp"
@@ -110,7 +110,7 @@
                 app:srcCompat="@drawable/outline_sentiment_neutral_black_48dp" />
 
             <ImageView
-                android:id="@+id/imageView19"
+                android:id="@+id/IVFelizCalificar"
                 android:layout_width="80dp"
                 android:layout_height="80dp"
                 android:layout_marginStart="10dp"
@@ -130,33 +130,33 @@
             app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
 
             <TextView
-                android:id="@+id/textView18"
+                android:id="@+id/Mala"
                 android:layout_width="80dp"
                 android:layout_height="match_parent"
                 android:layout_marginStart="10dp"
                 android:layout_marginEnd="10dp"
                 android:gravity="center"
-                android:text="Mala"
+                android:text="@string/mala"
                 android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
             <TextView
-                android:id="@+id/textView19"
+                android:id="@+id/Regular"
                 android:layout_width="80dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
                 android:layout_marginEnd="10dp"
                 android:gravity="center"
-                android:text="Regular"
+                android:text="@string/regular"
                 android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
             <TextView
-                android:id="@+id/textView20"
+                android:id="@+id/Buena"
                 android:layout_width="80dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
                 android:layout_marginEnd="10dp"
                 android:gravity="center"
-                android:text="Buena"
+                android:text="@string/buena"
                 android:textAppearance="@style/TextAppearance.AppCompat.Large" />
         </LinearLayout>
 

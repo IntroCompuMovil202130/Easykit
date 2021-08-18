@@ -19,7 +19,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
-            android:id="@+id/textView"
+            android:id="@+id/Actualizar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/actualizar"
@@ -39,14 +39,14 @@
         app:layout_constraintTop_toBottomOf="@+id/linearLayout">
 
         <TextView
-            android:id="@+id/textView2"
+            android:id="@+id/NombreProducto"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="@string/name" />
 
         <EditText
-            android:id="@+id/editTextTextPersonName6"
+            android:id="@+id/ETNombreProductoModificar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -71,20 +71,20 @@
         app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
 
         <Spinner
-            android:id="@+id/spinner"
+            android:id="@+id/STematicasModificar"
             android:layout_width="match_parent"
             android:layout_height="48dp"
             android:entries="@array/tematicas" />
 
         <TextView
-            android:id="@+id/textView3"
+            android:id="@+id/DescripcionProducto"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
             android:text="@string/description" />
 
         <EditText
-            android:id="@+id/editTextTextPersonName8"
+            android:id="@+id/ETDescripcionModificar"
             android:layout_width="match_parent"
             android:layout_height="64dp"
             android:text="@string/description2"
@@ -96,7 +96,7 @@
             android:orientation="horizontal">
 
             <TextView
-                android:id="@+id/textView4"
+                android:id="@+id/TVTematica4Tematicas"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="12dp"
@@ -104,7 +104,7 @@
                 android:text="@string/precio" />
 
             <EditText
-                android:id="@+id/editTextTextPersonName9"
+                android:id="@+id/ETPrecioModificar"
                 android:layout_width="wrap_content"
                 android:layout_height="48dp"
                 android:layout_marginTop="12dp"
@@ -121,7 +121,7 @@
             android:orientation="horizontal">
 
             <ImageView
-                android:id="@+id/imageView3"
+                android:id="@+id/IVBuscarTematicas"
                 android:layout_width="wrap_content"
                 android:layout_height="128dp"
                 android:layout_marginTop="24dp"
@@ -135,7 +135,7 @@
                 android:orientation="vertical">
 
                 <Button
-                    android:id="@+id/button3"
+                    android:id="@+id/BAdjuntarFotoModificar"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="12dp"
@@ -145,7 +145,7 @@
                     android:text="@string/foto" />
 
                 <Button
-                    android:id="@+id/button5"
+                    android:id="@+id/BQuitarFotoModificar"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/buttonQuitar"
@@ -167,7 +167,7 @@
         app:layout_constraintTop_toBottomOf="@+id/linearLayout3">
 
         <Button
-            android:id="@+id/button7"
+            android:id="@+id/BGuardarModificar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -176,7 +176,7 @@
             android:background="@drawable/roundedbutton"/>
 
         <Button
-            android:id="@+id/button8"
+            android:id="@+id/BCancelarModificar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"

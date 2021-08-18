@@ -7,7 +7,7 @@
     tools:context=".MainActivity">
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/Logo"
         android:layout_width="300dp"
         android:layout_height="300dp"
         android:adjustViewBounds="false"
@@ -15,14 +15,14 @@
         android:contentDescription="@string/logo"
         android:cropToPadding="false"
         android:scaleType="centerInside"
-        app:layout_constraintBottom_toTopOf="@+id/botonRegistroMain"
+        app:layout_constraintBottom_toTopOf="@+id/BRegistroIngreso"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/logo" />
 
     <Button
-        android:id="@+id/botonIngresoMain"
+        android:id="@+id/BIngresoIngreso"
         android:layout_width="180dp"
         android:layout_height="48dp"
         android:layout_margin="50dp"
@@ -33,13 +33,13 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/botonRegistroMain"
+        android:id="@+id/BRegistroIngreso"
         android:layout_width="180dp"
         android:layout_height="48dp"
         android:layout_margin="30dp"
         android:background="@drawable/roundedbutton"
         android:text="@string/registro"
-        app:layout_constraintBottom_toTopOf="@+id/botonIngresoMain"
+        app:layout_constraintBottom_toTopOf="@+id/BIngresoIngreso"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
