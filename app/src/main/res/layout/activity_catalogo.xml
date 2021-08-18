@@ -77,11 +77,12 @@
 
         <Button
             android:id="@+id/button5"
-            android:layout_width="160dp"
-            android:layout_height="wrap_content"
+            android:layout_width="140dp"
+            android:layout_height="37dp"
             android:layout_marginStart="250dp"
-            android:layout_marginTop="60dp"
-            android:text="Precio: $35.000" />
+            android:layout_marginTop="85dp"
+            android:text="Precio: $35.000"
+            android:textSize="10dp" />
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
@@ -109,14 +110,6 @@
             android:layout_marginTop="60dp"
             android:text="Tema: Manualidades" />
 
-        <TextView
-            android:id="@+id/textView11"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="290dp"
-            android:layout_marginTop="90dp"
-            android:text="Precio: $55.000" />
-
         <ImageView
             android:id="@+id/imageView14"
             android:layout_width="150dp"
@@ -125,6 +118,15 @@
             android:layout_marginTop="15dp"
             android:layout_marginBottom="15dp"
             app:srcCompat="@drawable/kit2" />
+
+        <Button
+            android:id="@+id/button6"
+            android:layout_width="140dp"
+            android:layout_height="37dp"
+            android:layout_marginStart="250dp"
+            android:layout_marginTop="85dp"
+            android:text="Precio: $55.000"
+            android:textSize="10dp" />
 
     </androidx.cardview.widget.CardView>
 
@@ -153,14 +155,6 @@
             android:layout_marginTop="60dp"
             android:text="Tema: Manualidades" />
 
-        <TextView
-            android:id="@+id/textView14"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="290dp"
-            android:layout_marginTop="90dp"
-            android:text="Precio: $45.500" />
-
         <ImageView
             android:id="@+id/imageView15"
             android:layout_width="150dp"
@@ -169,6 +163,15 @@
             android:layout_marginTop="15dp"
             android:layout_marginBottom="15dp"
             app:srcCompat="@drawable/kit3" />
+
+        <Button
+            android:id="@+id/button7"
+            android:layout_width="140dp"
+            android:layout_height="37dp"
+            android:layout_marginStart="250dp"
+            android:layout_marginTop="85dp"
+            android:text="Precio: $45.500"
+            android:textSize="10dp" />
 
     </androidx.cardview.widget.CardView>
 
