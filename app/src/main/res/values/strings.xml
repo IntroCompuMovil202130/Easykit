@@ -20,6 +20,7 @@
     <string name="button">Publicar</string>
     <string name="buttonGuardar">Guardar</string>
     <string name="buttonCancelar">Cancelar</string>
+    <string name="buttonRegresar">Regresar</string>
     <string name="buttonQuitar">Quitar foto</string>
     <string name="hint">Nombre</string>
     <string name="hint2">Descripción</string>
@@ -29,5 +30,9 @@
     <string name="precio2">COP $ </string>
     <string name="precio3">COP $35.000 </string>
     <string name="foto">Adjuntar foto</string>
+    <string name="ciudad">Bogotá D.C.</string>
+    <string name="ubicacion">Ubicación</string>
+    <string name="textUbicacion">Encuéntranos!</string>
+    <string name="textUbicacion2">Aquí podrás encontrar nuestras tiendas con disponibilidad del producto que buscas.</string>
     <string name="title_activity_maps">MapsActivity</string>
 </resources>

@@ -30,10 +30,10 @@
             android:value="AIzaSyAhfcuYfJDrCqa8wOo_j1JrHPIkEFsaZSw" />
 
         <activity
-            android:name=".MainActivity"
+            android:name=".UbicacionTiendaActivity"
             android:exported="true" />
         <activity
-            android:name=".UbicacionTiendaActivity"
+            android:name=".MapsActivity"
             android:exported="true" />
         <activity
             android:name=".AgregarProductoActivity"
@@ -81,9 +81,8 @@
             android:name=".PreguntasProductoActivity"
             android:exported="true" />
         <activity
-            android:name=".MapsActivity"
-            android:exported="true"
-            android:label="@string/title_activity_maps">
+            android:name=".MainActivity"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
