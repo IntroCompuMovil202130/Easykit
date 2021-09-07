@@ -1,11 +1,8 @@
 package com.example.easykit;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
-import android.view.View;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
@@ -16,16 +13,14 @@ import androidx.drawerlayout.widget.DrawerLayout;
 
 import com.google.android.material.navigation.NavigationView;
 
-import android.os.Bundle;
-
-public class CalificacionProductosActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
+public class PedidosActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
     private DrawerLayout drawerLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_calificacion_productos);
+        setContentView(R.layout.activity_pedidos);
 
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar((Toolbar) findViewById(R.id.toolbar));
@@ -36,8 +31,9 @@ public class CalificacionProductosActivity extends AppCompatActivity implements 
         toggle.syncState();
         NavigationView navigationView = findViewById(R.id.navigation_view);
         navigationView.setNavigationItemSelectedListener(this);
-    }
 
+    }
+    
     @Override
     public void onBackPressed() {
         if (drawerLayout.isDrawerOpen(GravityCompat.START)) {
@@ -80,4 +76,5 @@ public class CalificacionProductosActivity extends AppCompatActivity implements 
 
         return true;
     }
+
 }
