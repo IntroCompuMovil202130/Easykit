@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:title="MENU" />
+    <group
+        android:id="@+id/group1"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/catalogoProductos"
+            android:icon="@drawable/ic_menu"
+            android:title="Catalogo de Productos"
+            app:showAsAction="never" />
+    </group>
+    <group
+        android:id="@+id/group2"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/perfil"
+            android:icon="@drawable/ic_account_circle"
+            android:title="Perfil"
+            app:showAsAction="never" />
+    </group>
+    <group
+        android:id="@+id/group3"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/pedidos"
+            android:icon="@drawable/ic_inventory_2"
+            android:title="Pedidos"
+            app:showAsAction="never" />
+    </group>
+    <group
+        android:id="@+id/group4"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/ubicacion"
+            android:icon="@drawable/ic_location_on"
+            android:title="Ubicación"
+            app:showAsAction="never" />
+    </group>
+    <group
+        android:id="@+id/group5"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/chat"
+            android:icon="@drawable/ic_chat"
+            android:title="Chat"
+            app:showAsAction="never" />
+    </group>
+    <group
+        android:id="@+id/group6"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/salir"
+            android:icon="@drawable/ic_logout"
+            android:title="Salir"
+            app:showAsAction="never" />
+    </group>
+</menu>

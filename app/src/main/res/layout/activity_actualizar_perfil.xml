@@ -40,7 +40,6 @@
         android:background="@drawable/roundedbutton"
         android:ems="10"
         android:hint="@string/apellidos"
-        android:hintTextColor="#757575"
         android:inputType="textPersonName"
         android:textAlignment="center"
         app:layout_constraintEnd_toStartOf="@+id/IVfotoPerfil"

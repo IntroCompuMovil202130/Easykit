@@ -15,7 +15,7 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Easykit">
+        android:theme="@style/Theme.EasykitNoActionBar">
 
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
@@ -70,19 +70,23 @@
             android:exported="true" />
         <activity
             android:name=".AutenticacionActivity"
-            android:exported="true" />
+            android:exported="true"
+            android:theme="@style/Theme.EasykitNoActionBar" />
         <activity
             android:name=".RegistroActivity"
-            android:exported="true" />
+            android:exported="true"
+            android:theme="@style/Theme.EasykitNoActionBar" />
         <activity
             android:name=".IngresoActivity"
-            android:exported="true" />
+            android:exported="true"
+            android:theme="@style/Theme.EasykitNoActionBar" />
         <activity
             android:name=".PreguntasProductoActivity"
             android:exported="true" />
         <activity
             android:name=".MainActivity"
-            android:exported="true">
+            android:exported="true"
+            android:theme="@style/Theme.EasykitNoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
