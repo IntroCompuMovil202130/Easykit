@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
@@ -15,7 +16,7 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import com.google.android.material.navigation.NavigationView;
 
 public class CatalogoActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
-
+    Button tematicas;
     private DrawerLayout drawerLayout;
 
     @Override
@@ -84,4 +85,8 @@ public class CatalogoActivity extends AppCompatActivity implements NavigationVie
         return true;
     }
 
+    public void mostrarTematicas(View view){
+        Intent intent=new Intent(this,DespliegueTematicasActivity.class);
+        startActivity(intent);
+    }
 }

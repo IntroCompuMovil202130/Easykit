@@ -25,12 +25,14 @@
             android:layout_height="match_parent"
             tools:context=".DespliegueTematicasActivity">
 
-            <ImageView
-                android:id="@+id/IVOrdenTematicas"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="40dp"
-                android:layout_marginTop="16dp"
+            <ImageButton
+                android:id="@+id/botonFiltrar"
+                android:layout_width="48dp"
+                android:layout_height="45dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="12dp"
+                android:onClick="mostrarCatalogo"
+                android:scaleType="center"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/ETBuscarTematicas"
                 app:srcCompat="@android:drawable/ic_menu_sort_by_size" />
@@ -64,11 +66,11 @@
                 android:id="@+id/cardView"
                 android:layout_width="409dp"
                 android:layout_height="70dp"
-                android:layout_marginTop="32dp"
+                android:layout_marginTop="16dp"
                 app:cardBackgroundColor="@color/cyan"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/IVOrdenTematicas">
+                app:layout_constraintTop_toBottomOf="@+id/botonFiltrar">
 
                 <CheckBox
                     android:id="@+id/CBTematica1Tematicas"

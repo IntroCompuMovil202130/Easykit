@@ -79,6 +79,10 @@ public class DespliegueTematicasActivity extends AppCompatActivity implements Na
         return true;
     }
 
+    public void mostrarCatalogo(View view){
+        Intent intent=new Intent(this,CatalogoActivity.class);
+        startActivity(intent);
+    }
 
 
 }

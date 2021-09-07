@@ -24,6 +24,17 @@
             android:layout_height="match_parent"
             tools:context=".CatalogoActivity">
 
+            <ImageButton
+                android:id="@+id/botonTematicas"
+                android:layout_width="58dp"
+                android:layout_height="39dp"
+                android:layout_marginStart="28dp"
+                android:layout_marginTop="12dp"
+                android:onClick="mostrarTematicas"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ETBuscarCatalogo"
+                app:srcCompat="@android:drawable/ic_menu_sort_by_size" />
+
             <EditText
                 android:id="@+id/ETBuscarCatalogo"
                 android:layout_width="350dp"
@@ -40,16 +51,6 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <ImageView
-                android:id="@+id/IVOrdenCatalogo"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="40dp"
-                android:layout_marginTop="16dp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/ETBuscarCatalogo"
-                app:srcCompat="@android:drawable/ic_menu_sort_by_size" />
-
-            <ImageView
                 android:id="@+id/IVBuscarCatalogo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -63,10 +64,10 @@
                 android:id="@+id/cardView5"
                 android:layout_width="409dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
+                android:layout_marginTop="20dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/IVOrdenCatalogo">
+                app:layout_constraintTop_toBottomOf="@+id/botonTematicas">
 
                 <ImageView
                     android:id="@+id/IVProducto1Catalogo"
