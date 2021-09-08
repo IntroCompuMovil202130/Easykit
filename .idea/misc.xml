@@ -3,54 +3,27 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Documentos/8vo/CompuMovil/Proyecto/Easykit/app/src/main/res/layout/activity_detalles_producto.xml" value="0.290625" />
-        <entry key="..\:/Documentos/8vo/CompuMovil/Proyecto/Easykit/app/src/main/res/layout/activity_pago.xml" value="0.25" />
-        <entry key="..\:/Documentos/8vo/CompuMovil/Proyecto/Easykit/app/src/main/res/layout/activity_pedidos.xml" value="0.33" />
-        <entry key="..\:/Documentos/8vo/CompuMovil/Proyecto/Easykit/app/src/main/res/layout/activity_preguntas_producto.xml" value="0.290625" />
-        <entry key="..\:/Documentos/8vo/CompuMovil/Proyecto/Easykit/app/src/main/res/layout/activity_registro.xml" value="0.25" />
-        <entry key="..\:/Juanpa/U/Semestre 8/Introduccion a la computacion movil/Proyecto/Easykit/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.225" />
-        <entry key="..\:/Juanpa/U/Semestre 8/Introduccion a la computacion movil/Proyecto/Easykit/app/src/main/res/drawable/circle.xml" value="0.2326388888888889" />
-        <entry key="..\:/Juanpa/U/Semestre 8/Introduccion a la computacion movil/Proyecto/Easykit/app/src/main/res/drawable/ic_baseline_sentiment_satisfied_alt_24.xml" value="0.24982817869415808" />
-        <entry key="..\:/Juanpa/U/Semestre 8/Introduccion a la computacion movil/Proyecto/Easykit/app/src/main/res/drawable/ic_launcher_background.xml" value="0.225" />
-        <entry key="..\:/Juanpa/U/Semestre 8/Introduccion a la computacion movil/Proyecto/Easykit/app/src/main/res/drawable/roundedbutton.xml" value="0.225" />
-        <entry key="..\:/Juanpa/U/Semestre 8/Introduccion a la computacion movil/Proyecto/Easykit/app/src/main/res/layout/activity_actualizar_perfil.xml" value="0.25" />
-        <entry key="..\:/Juanpa/U/Semestre 8/Introduccion a la computacion movil/Proyecto/Easykit/app/src/main/res/layout/activity_agregar_producto.xml" value="0.25416666666666665" />
-        <entry key="..\:/Juanpa/U/Semestre 8/Introduccion a la computacion movil/Proyecto/Easykit/app/src/main/res/layout/activity_autenticacion.xml" value="0.264" />
-        <entry key="..\:/Juanpa/U/Semestre 8/Introduccion a la computacion movil/Proyecto/Easykit/app/src/main/res/layout/activity_calificacion_productos.xml" value="0.25" />
-        <entry key="..\:/Juanpa/U/Semestre 8/Introduccion a la computacion movil/Proyecto/Easykit/app/src/main/res/layout/activity_catalogo.xml" value="0.25416666666666665" />
-        <entry key="..\:/Juanpa/U/Semestre 8/Introduccion a la computacion movil/Proyecto/Easykit/app/src/main/res/layout/activity_chat_vendedores.xml" value="0.25416666666666665" />
-        <entry key="..\:/Juanpa/U/Semestre 8/Introduccion a la computacion movil/Proyecto/Easykit/app/src/main/res/layout/activity_despliegue_tematicas.xml" value="0.25416666666666665" />
-        <entry key="..\:/Juanpa/U/Semestre 8/Introduccion a la computacion movil/Proyecto/Easykit/app/src/main/res/layout/activity_detalles_producto.xml" value="0.25416666666666665" />
-        <entry key="..\:/Juanpa/U/Semestre 8/Introduccion a la computacion movil/Proyecto/Easykit/app/src/main/res/layout/activity_ingreso.xml" value="0.264" />
-        <entry key="..\:/Juanpa/U/Semestre 8/Introduccion a la computacion movil/Proyecto/Easykit/app/src/main/res/layout/activity_main.xml" value="0.25416666666666665" />
-        <entry key="..\:/Juanpa/U/Semestre 8/Introduccion a la computacion movil/Proyecto/Easykit/app/src/main/res/layout/activity_maps.xml" value="0.24444444444444444" />
-        <entry key="..\:/Juanpa/U/Semestre 8/Introduccion a la computacion movil/Proyecto/Easykit/app/src/main/res/layout/activity_modificar_producto.xml" value="0.25416666666666665" />
-        <entry key="..\:/Juanpa/U/Semestre 8/Introduccion a la computacion movil/Proyecto/Easykit/app/src/main/res/layout/activity_pago.xml" value="0.25" />
-        <entry key="..\:/Juanpa/U/Semestre 8/Introduccion a la computacion movil/Proyecto/Easykit/app/src/main/res/layout/activity_preguntas_producto.xml" value="0.24444444444444444" />
-        <entry key="..\:/Juanpa/U/Semestre 8/Introduccion a la computacion movil/Proyecto/Easykit/app/src/main/res/layout/activity_proteccion_pago.xml" value="0.25416666666666665" />
-        <entry key="..\:/Juanpa/U/Semestre 8/Introduccion a la computacion movil/Proyecto/Easykit/app/src/main/res/layout/activity_registro.xml" value="0.25416666666666665" />
-        <entry key="..\:/Juanpa/U/Semestre 8/Introduccion a la computacion movil/Proyecto/Easykit/app/src/main/res/layout/activity_side_bar_menu.xml" value="0.25416666666666665" />
-        <entry key="..\:/Juanpa/U/Semestre 8/Introduccion a la computacion movil/Proyecto/Easykit/app/src/main/res/layout/activity_ubicacion_tienda.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/sando/OneDrive/Documentos/7 semestre/ingsoft/proyecto/Easykit/app/src/main/res/layout/activity_actualizar_perfil.xml" value="0.20520833333333333" />
-        <entry key="..\:/Users/sando/OneDrive/Documentos/7 semestre/ingsoft/proyecto/Easykit/app/src/main/res/layout/activity_agregar_producto.xml" value="0.33" />
-        <entry key="..\:/Users/sando/OneDrive/Documentos/7 semestre/ingsoft/proyecto/Easykit/app/src/main/res/layout/activity_autenticacion.xml" value="0.2921195652173913" />
-        <entry key="..\:/Users/sando/OneDrive/Documentos/7 semestre/ingsoft/proyecto/Easykit/app/src/main/res/layout/activity_calificacion_productos.xml" value="0.22644927536231885" />
-        <entry key="..\:/Users/sando/OneDrive/Documentos/7 semestre/ingsoft/proyecto/Easykit/app/src/main/res/layout/activity_catalogo.xml" value="0.2921195652173913" />
-        <entry key="..\:/Users/sando/OneDrive/Documentos/7 semestre/ingsoft/proyecto/Easykit/app/src/main/res/layout/activity_chat_vendedores.xml" value="0.2921195652173913" />
-        <entry key="..\:/Users/sando/OneDrive/Documentos/7 semestre/ingsoft/proyecto/Easykit/app/src/main/res/layout/activity_despliegue_tematicas.xml" value="0.5" />
-        <entry key="..\:/Users/sando/OneDrive/Documentos/7 semestre/ingsoft/proyecto/Easykit/app/src/main/res/layout/activity_detalles_producto.xml" value="0.2798913043478261" />
-        <entry key="..\:/Users/sando/OneDrive/Documentos/7 semestre/ingsoft/proyecto/Easykit/app/src/main/res/layout/activity_ingreso.xml" value="0.2563405797101449" />
-        <entry key="..\:/Users/sando/OneDrive/Documentos/7 semestre/ingsoft/proyecto/Easykit/app/src/main/res/layout/activity_main.xml" value="0.35280797101449274" />
-        <entry key="..\:/Users/sando/OneDrive/Documentos/7 semestre/ingsoft/proyecto/Easykit/app/src/main/res/layout/activity_maps.xml" value="0.35280797101449274" />
-        <entry key="..\:/Users/sando/OneDrive/Documentos/7 semestre/ingsoft/proyecto/Easykit/app/src/main/res/layout/activity_modificar_producto.xml" value="0.35280797101449274" />
-        <entry key="..\:/Users/sando/OneDrive/Documentos/7 semestre/ingsoft/proyecto/Easykit/app/src/main/res/layout/activity_pago.xml" value="0.2798913043478261" />
-        <entry key="..\:/Users/sando/OneDrive/Documentos/7 semestre/ingsoft/proyecto/Easykit/app/src/main/res/layout/activity_pedidos.xml" value="0.35280797101449274" />
-        <entry key="..\:/Users/sando/OneDrive/Documentos/7 semestre/ingsoft/proyecto/Easykit/app/src/main/res/layout/activity_preguntas_producto.xml" value="0.2798913043478261" />
-        <entry key="..\:/Users/sando/OneDrive/Documentos/7 semestre/ingsoft/proyecto/Easykit/app/src/main/res/layout/activity_proteccion_pago.xml" value="0.2798913043478261" />
-        <entry key="..\:/Users/sando/OneDrive/Documentos/7 semestre/ingsoft/proyecto/Easykit/app/src/main/res/layout/activity_registro.xml" value="0.2798913043478261" />
-        <entry key="..\:/Users/sando/OneDrive/Documentos/7 semestre/ingsoft/proyecto/Easykit/app/src/main/res/layout/activity_side_bar_menu.xml" value="0.2798913043478261" />
-        <entry key="..\:/Users/sando/OneDrive/Documentos/7 semestre/ingsoft/proyecto/Easykit/app/src/main/res/layout/activity_ubicacion_tienda.xml" value="0.2798913043478261" />
-        <entry key="..\:/Users/sando/OneDrive/Documentos/7 semestre/ingsoft/proyecto/Easykit/app/src/main/res/menu/side_bar_menu.xml" value="0.36666666666666664" />
+        <entry key="..\:/Documentos/8vo/CompuMovil/Proyecto/Easykit/app/src/main/res/drawable/prueba.xml" value="0.24322916666666666" />
+        <entry key="..\:/Documentos/8vo/CompuMovil/Proyecto/Easykit/app/src/main/res/drawable/roundedText.xml" value="0.3151041666666667" />
+        <entry key="..\:/Documentos/8vo/CompuMovil/Proyecto/Easykit/app/src/main/res/drawable/roundedbutton.xml" value="0.24322916666666666" />
+        <entry key="..\:/Documentos/8vo/CompuMovil/Proyecto/Easykit/app/src/main/res/drawable/roundedbuttons.xml" value="0.3692708333333333" />
+        <entry key="..\:/Documentos/8vo/CompuMovil/Proyecto/Easykit/app/src/main/res/drawable/roundedbuttons2.xml" value="0.24322916666666666" />
+        <entry key="..\:/Documentos/8vo/CompuMovil/Proyecto/Easykit/app/src/main/res/drawable/roundedtext.xml" value="0.37592592592592594" />
+        <entry key="..\:/Documentos/8vo/CompuMovil/Proyecto/Easykit/app/src/main/res/drawable/roundedtextbuttons.xml" value="0.2234375" />
+        <entry key="..\:/Documentos/8vo/CompuMovil/Proyecto/Easykit/app/src/main/res/layout/activity_actualizar_perfil.xml" value="0.33" />
+        <entry key="..\:/Documentos/8vo/CompuMovil/Proyecto/Easykit/app/src/main/res/layout/activity_ingreso.xml" value="0.33" />
+        <entry key="..\:/Documentos/8vo/CompuMovil/Proyecto/Easykit/app/src/main/res/layout/activity_main.xml" value="0.33" />
+        <entry key="..\:/Documentos/8vo/CompuMovil/Proyecto/Easykit/app/src/main/res/layout/activity_registro.xml" value="0.33" />
+        <entry key="..\:/Documentos/8vo/CompuMovil/Proyecto/Easykit/app/src/main/res/layout/roundedbutton.xml" value="0.16489361702127658" />
+        <entry key="..\:/Juanpa/U/Semestre 8/Introduccion a la computacion movil/Proyecto/Easykit/app/src/main/res/layout/activity_preguntas_producto.xml" value="0.24010416666666667" />
+        <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.3359375" />
+        <entry key="app/src/main/res/drawable/roundedbutton.xml" value="0.3359375" />
+        <entry key="app/src/main/res/layout/activity_agregar_producto.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/activity_catalogo.xml" value="0.22708333333333333" />
+        <entry key="app/src/main/res/layout/activity_maps.xml" value="0.259963768115942" />
+        <entry key="app/src/main/res/layout/activity_modificar_producto.xml" value="0.259963768115942" />
+        <entry key="app/src/main/res/layout/activity_pago.xml" value="0.17395833333333333" />
+        <entry key="app/src/main/res/layout/activity_ubicacion_tienda.xml" value="0.254981884057971" />
       </map>
     </option>
   </component>

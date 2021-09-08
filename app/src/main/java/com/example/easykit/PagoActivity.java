@@ -1,6 +1,9 @@
 package com.example.easykit;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
@@ -15,11 +18,14 @@ import androidx.drawerlayout.widget.DrawerLayout;
 
 import com.google.android.material.navigation.NavigationView;
 import android.os.Bundle;
+import android.widget.Button;
 
 public class PagoActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
     private DrawerLayout drawerLayout;
 
+
+    Button continuar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,6 +40,15 @@ public class PagoActivity extends AppCompatActivity implements NavigationView.On
         toggle.syncState();
         NavigationView navigationView = findViewById(R.id.navigation_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+        continuar = (Button) findViewById(R.id.boton2);
+
+        continuar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                mostrarDialogo();
+            }
+        });
         
     }
 
@@ -80,6 +95,23 @@ public class PagoActivity extends AppCompatActivity implements NavigationView.On
         return true;
     }
 
+    private void mostrarDialogo(){
+        new AlertDialog.Builder(this)
+                .setTitle("Importante")
+                .setMessage("El vendedor recibirá el pago cuando usted reciba el producto, de lo contrario usted recibirá el rembolso")
+                .setPositiveButton(R.string.continuar, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        //finish();
+                    }
+                })
+                .setNegativeButton(R.string.cancelar, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
 
+                    }
+                })
+                .show();
+    }
 
 }

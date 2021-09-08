@@ -60,4 +60,6 @@
     <string name="navide_o">Navideño</string>
     <string name="halloween">Halloween</string>
     <string name="verano">Verano</string>
+    <string name="continuar">continuar</string>
+    <string name="cancelar">cancelar</string>
 </resources>
