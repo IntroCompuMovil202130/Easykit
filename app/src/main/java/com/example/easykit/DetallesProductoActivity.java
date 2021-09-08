@@ -9,6 +9,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
@@ -22,6 +23,7 @@ import com.google.android.material.navigation.NavigationView;
 public class DetallesProductoActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
     private DrawerLayout drawerLayout;
+    Button verPreguntas;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,6 +39,12 @@ public class DetallesProductoActivity extends AppCompatActivity implements Navig
         toggle.syncState();
         NavigationView navigationView = findViewById(R.id.navigation_view);
         navigationView.setNavigationItemSelectedListener(this);
+        verPreguntas= findViewById(R.id.BPreguntas);
+    }
+
+    public void verPreguntas(View view){
+        Intent intent = new Intent(this, PreguntasProductoActivity.class);
+        startActivity(intent);
     }
 
     public void pago(View view) {

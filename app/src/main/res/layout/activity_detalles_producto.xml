@@ -36,8 +36,8 @@
 
                     <ImageView
                         android:id="@+id/IVOrdenTematicas"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_width="283dp"
+                        android:layout_height="174dp"
                         android:layout_marginTop="32dp"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintHorizontal_bias="0.495"
@@ -74,6 +74,16 @@
                             android:layout_marginEnd="16dp"
                             android:clickable="false"
                             android:entries="@array/Articulos" />
+
+                        <Button
+                            android:id="@+id/BPreguntas"
+                            android:layout_width="130dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/roundedbutton"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="10dp"
+                            android:onClick="verPreguntas"
+                            android:text="Preguntas" />
 
                         <Button
                             android:id="@+id/BPrecio2Catalogo"
