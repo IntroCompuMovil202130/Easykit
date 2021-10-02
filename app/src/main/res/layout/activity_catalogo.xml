@@ -1,202 +1,233 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".CatalogoActivity">
+    android:fitsSystemWindows="true"
+    tools:openDrawer="start">
 
-    <EditText
-        android:id="@+id/ETBuscarCatalogo"
-        android:layout_width="350dp"
-        android:layout_height="48dp"
-        android:layout_marginTop="72dp"
-        android:background="@drawable/roundedbutton"
-        android:ems="10"
-        android:hint="@string/buscar"
-        android:inputType="textPersonName"
-        android:textAlignment="center"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"  />
+    <LinearLayout
+        android:id="@+id/home_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-    <ImageView
-        android:id="@+id/IVOrdenCatalogo"
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".CatalogoActivity">
+
+            <ImageButton
+                android:id="@+id/botonTematicas"
+                android:layout_width="58dp"
+                android:layout_height="39dp"
+                android:layout_marginStart="28dp"
+                android:layout_marginTop="12dp"
+                android:onClick="mostrarTematicas"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ETBuscarCatalogo"
+                app:srcCompat="@android:drawable/ic_menu_sort_by_size" />
+
+            <EditText
+                android:id="@+id/ETBuscarCatalogo"
+                android:layout_width="350dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="24dp"
+                android:background="@drawable/roundedbutton"
+                android:ems="10"
+                android:hint="@string/buscar"
+                android:inputType="textPersonName"
+                android:textAlignment="center"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.497"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/IVBuscarCatalogo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="28dp"
+                android:layout_marginTop="12dp"
+                app:layout_constraintStart_toStartOf="@+id/ETBuscarCatalogo"
+                app:layout_constraintTop_toTopOf="@+id/ETBuscarCatalogo"
+                app:srcCompat="?android:attr/actionModeWebSearchDrawable" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView5"
+                android:layout_width="409dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/botonTematicas">
+
+                <ImageView
+                    android:id="@+id/IVProducto1Catalogo"
+                    android:layout_width="150dp"
+                    android:layout_height="100dp"
+                    android:layout_marginStart="44dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="15dp"
+                    app:srcCompat="@drawable/kit1" />
+
+                <TextView
+                    android:id="@+id/TVNombreProducto1Catalogo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="220dp"
+                    android:layout_marginTop="30dp"
+                    android:text="@string/kit_escolar" />
+
+                <TextView
+                    android:id="@+id/TVTema1Catalogo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="220dp"
+                    android:layout_marginTop="60dp"
+                    android:text="@string/tema_colegio" />
+
+                <Button
+                    android:id="@+id/BPrecio1Catalogo"
+                    android:layout_width="140dp"
+                    android:layout_height="37dp"
+                    android:layout_marginStart="250dp"
+                    android:layout_marginTop="85dp"
+                    android:onClick="detalle"
+                    android:text="@string/precio_35_000"
+                    android:textSize="10dp" />
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView6"
+                android:layout_width="409dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cardView5">
+
+                <ImageView
+                    android:id="@+id/IVProducto2Catalogo"
+                    android:layout_width="150dp"
+                    android:layout_height="100dp"
+                    android:layout_marginStart="44dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="15dp"
+                    app:srcCompat="@drawable/kit2" />
+
+                <TextView
+                    android:id="@+id/TVNombreProducto2Catalogo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="220dp"
+                    android:layout_marginTop="30dp"
+                    android:text="@string/kit_marcadores" />
+
+                <TextView
+                    android:id="@+id/TVTema2Catalogo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="220dp"
+                    android:layout_marginTop="60dp"
+                    android:text="@string/tema_manualidades" />
+
+                <Button
+                    android:id="@+id/BPrecio2Catalogo"
+                    android:layout_width="140dp"
+                    android:layout_height="37dp"
+                    android:layout_marginStart="250dp"
+                    android:layout_marginTop="85dp"
+                    android:onClick="detalle"
+                    android:text="@string/precio_55_000"
+                    android:textSize="10dp" />
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView7"
+                android:layout_width="409dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="28dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cardView6">
+
+                <ImageView
+                    android:id="@+id/IVProducto3Catalogo"
+                    android:layout_width="150dp"
+                    android:layout_height="100dp"
+                    android:layout_marginStart="44dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="15dp"
+                    app:srcCompat="@drawable/kit3" />
+
+                <TextView
+                    android:id="@+id/TVNombreProducto3Catalogo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="220dp"
+                    android:layout_marginTop="30dp"
+                    android:text="@string/kit_marcadores" />
+
+                <TextView
+                    android:id="@+id/TVTema3Catalogo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="220dp"
+                    android:layout_marginTop="60dp"
+                    android:text="@string/tema_manualidades" />
+
+                <Button
+                    android:id="@+id/BPrecio3Catalogo"
+                    android:layout_width="140dp"
+                    android:layout_height="37dp"
+                    android:layout_marginStart="250dp"
+                    android:layout_marginTop="85dp"
+                    android:onClick="detalle"
+                    android:text="@string/precio_45_500"
+                    android:textSize="10dp" />
+
+            </androidx.cardview.widget.CardView>
+
+            <Button
+                android:id="@+id/BAnteriorCatalogo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="40dp"
+                android:background="@drawable/roundedbutton"
+                android:text="@string/anterior"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cardView7" />
+
+            <Button
+                android:id="@+id/BSiguienteCatalogo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="40dp"
+                android:background="@drawable/roundedbutton"
+                android:text="@string/siguiente"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cardView7" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/navigation_view"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="16dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ETBuscarCatalogo"
-        app:srcCompat="@android:drawable/ic_menu_sort_by_size" />
-
-    <ImageView
-        android:id="@+id/IVBuscarCatalogo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="28dp"
-        android:layout_marginTop="12dp"
-        app:layout_constraintStart_toStartOf="@+id/ETBuscarCatalogo"
-        app:layout_constraintTop_toTopOf="@+id/ETBuscarCatalogo"
-        app:srcCompat="?android:attr/actionModeWebSearchDrawable" />
-
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cardView5"
-        android:layout_width="409dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/IVOrdenCatalogo">
-
-        <ImageView
-            android:id="@+id/IVProducto1Catalogo"
-            android:layout_width="150dp"
-            android:layout_height="100dp"
-            android:layout_marginStart="44dp"
-            android:layout_marginTop="15dp"
-            android:layout_marginBottom="15dp"
-            app:srcCompat="@drawable/kit1" />
-
-        <TextView
-            android:id="@+id/TVNombreProducto1Catalogo"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="220dp"
-            android:layout_marginTop="30dp"
-            android:text="@string/kit_escolar" />
-
-        <TextView
-            android:id="@+id/TVTema1Catalogo"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="220dp"
-            android:layout_marginTop="60dp"
-            android:text="@string/tema_colegio" />
-
-        <Button
-            android:id="@+id/BPrecio1Catalogo"
-            android:layout_width="140dp"
-            android:layout_height="37dp"
-            android:layout_marginStart="250dp"
-            android:layout_marginTop="85dp"
-            android:text="@string/precio_35_000"
-            android:textSize="10dp" />
-    </androidx.cardview.widget.CardView>
-
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cardView6"
-        android:layout_width="409dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cardView5">
-
-        <ImageView
-            android:id="@+id/IVProducto2Catalogo"
-            android:layout_width="150dp"
-            android:layout_height="100dp"
-            android:layout_marginStart="44dp"
-            android:layout_marginTop="15dp"
-            android:layout_marginBottom="15dp"
-            app:srcCompat="@drawable/kit2" />
-
-        <TextView
-            android:id="@+id/TVNombreProducto2Catalogo"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="220dp"
-            android:layout_marginTop="30dp"
-            android:text="@string/kit_marcadores" />
-
-        <TextView
-            android:id="@+id/TVTema2Catalogo"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="220dp"
-            android:layout_marginTop="60dp"
-            android:text="@string/tema_manualidades" />
-
-        <Button
-            android:id="@+id/BPrecio2Catalogo"
-            android:layout_width="140dp"
-            android:layout_height="37dp"
-            android:layout_marginStart="250dp"
-            android:layout_marginTop="85dp"
-            android:text="@string/precio_55_000"
-            android:textSize="10dp" />
-
-    </androidx.cardview.widget.CardView>
-
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cardView7"
-        android:layout_width="409dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cardView6">
-
-        <ImageView
-            android:id="@+id/IVProducto3Catalogo"
-            android:layout_width="150dp"
-            android:layout_height="100dp"
-            android:layout_marginStart="44dp"
-            android:layout_marginTop="15dp"
-            android:layout_marginBottom="15dp"
-            app:srcCompat="@drawable/kit3" />
-
-        <TextView
-            android:id="@+id/TVNombreProducto3Catalogo"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="220dp"
-            android:layout_marginTop="30dp"
-            android:text="@string/kit_marcadores" />
-
-        <TextView
-            android:id="@+id/TVTema3Catalogo"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="220dp"
-            android:layout_marginTop="60dp"
-            android:text="@string/tema_manualidades" />
-
-        <Button
-            android:id="@+id/BPrecio3Catalogo"
-            android:layout_width="140dp"
-            android:layout_height="37dp"
-            android:layout_marginStart="250dp"
-            android:layout_marginTop="85dp"
-            android:text="@string/precio_45_500"
-            android:textSize="10dp" />
-
-    </androidx.cardview.widget.CardView>
-
-    <Button
-        android:id="@+id/BAnteriorCatalogo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="20dp"
-        android:text="@string/anterior"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cardView7"
-        android:background="@drawable/roundedbutton"
-        />
-
-    <Button
-        android:id="@+id/BSiguienteCatalogo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="40dp"
-        android:text="@string/siguiente"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cardView7"
-        android:background="@drawable/roundedbutton"
-        />
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:fitsSystemWindows="true"
+        app:menu="@menu/side_bar_menu" />
+</androidx.drawerlayout.widget.DrawerLayout>

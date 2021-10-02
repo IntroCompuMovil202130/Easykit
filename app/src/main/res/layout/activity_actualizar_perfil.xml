@@ -1,122 +1,150 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ActualizarPerfilActivity">
+    android:fitsSystemWindows="true"
+    tools:openDrawer="start">
 
-    <ImageView
-        android:id="@+id/IVfotoPerfil"
+    <LinearLayout
+        android:id="@+id/home_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".ActualizarPerfilActivity">
+
+            <ImageView
+                android:id="@+id/IVfotoPerfil"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:layout_marginEnd="16dp"
+                android:contentDescription="@string/fotoPerfil"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:srcCompat="@tools:sample/avatars" />
+
+            <EditText
+                android:id="@+id/ETNombresActualizar"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:layout_marginTop="60dp"
+                android:background="@drawable/roundedbutton"
+                android:ems="10"
+                android:hint="@string/nombres"
+                android:inputType="textPersonName"
+                android:textAlignment="center"
+                app:layout_constraintEnd_toStartOf="@+id/IVfotoPerfil"
+                app:layout_constraintHorizontal_bias="0.471"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/ETApellidosActualizar"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:layout_marginTop="24dp"
+                android:background="@drawable/roundedbutton"
+                android:ems="10"
+                android:hint="@string/apellidos"
+                android:inputType="textPersonName"
+                android:textAlignment="center"
+                app:layout_constraintEnd_toStartOf="@+id/IVfotoPerfil"
+                app:layout_constraintHorizontal_bias="0.471"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ETNombresActualizar"
+                tools:ignore="TextContrastCheck" />
+
+            <EditText
+                android:id="@+id/ETCorreoActualizar"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:layout_marginTop="52dp"
+                android:background="@drawable/roundedbutton"
+                android:ems="10"
+                android:hint="@string/correo"
+                android:inputType="textPersonName"
+                android:textAlignment="center"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.497"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ETApellidosActualizar" />
+
+            <EditText
+                android:id="@+id/ETContraActualizar"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:layout_marginTop="36dp"
+                android:background="@drawable/roundedbutton"
+                android:ems="10"
+                android:hint="@string/nuevaContrasenna"
+                android:inputType="textPersonName"
+                android:textAlignment="center"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.502"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ETCorreoActualizar" />
+
+            <EditText
+                android:id="@+id/ETConfirmarContraActualizar"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:layout_marginTop="36dp"
+                android:background="@drawable/roundedbutton"
+                android:ems="10"
+                android:hint="@string/confirmarContrasenna"
+                android:inputType="textPersonName"
+                android:textAlignment="center"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.502"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ETContraActualizar" />
+
+            <Button
+                android:id="@+id/BCambiarFotoActualizar"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/roundedbutton"
+                android:text="@string/cambiarFotoPerfil"
+                android:textColor="#FFFFFF"
+                app:layout_constraintBottom_toTopOf="@+id/BGuardarCambiosActualizar"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <Button
+                android:id="@+id/BGuardarCambiosActualizar"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="32dp"
+                android:background="@drawable/roundedbutton"
+                android:text="@string/guardarCambios"
+                android:textColor="#FFFFFF"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.498"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:ignore="TextContrastCheck" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/navigation_view"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:layout_marginEnd="16dp"
-        android:contentDescription="@string/fotoPerfil"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:srcCompat="@tools:sample/avatars" />
-
-    <EditText
-        android:id="@+id/ETNombresActualizar"
-        android:layout_width="wrap_content"
-        android:layout_height="48dp"
-        android:layout_marginTop="60dp"
-        android:background="@drawable/roundedbutton"
-        android:ems="10"
-        android:hint="@string/nombres"
-        android:inputType="textPersonName"
-        android:textAlignment="center"
-        app:layout_constraintEnd_toStartOf="@+id/IVfotoPerfil"
-        app:layout_constraintHorizontal_bias="0.471"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <EditText
-        android:id="@+id/ETApellidosActualizar"
-        android:layout_width="wrap_content"
-        android:layout_height="48dp"
-        android:layout_marginTop="24dp"
-        android:background="@drawable/roundedbutton"
-        android:ems="10"
-        android:hint="@string/apellidos"
-        android:hintTextColor="#757575"
-        android:inputType="textPersonName"
-        android:textAlignment="center"
-        app:layout_constraintEnd_toStartOf="@+id/IVfotoPerfil"
-        app:layout_constraintHorizontal_bias="0.471"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ETNombresActualizar"
-        tools:ignore="TextContrastCheck" />
-
-    <EditText
-        android:id="@+id/ETCorreoActualizar"
-        android:layout_width="wrap_content"
-        android:layout_height="48dp"
-        android:layout_marginTop="52dp"
-        android:background="@drawable/roundedbutton"
-        android:ems="10"
-        android:hint="@string/correo"
-        android:inputType="textPersonName"
-        android:textAlignment="center"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ETApellidosActualizar" />
-
-    <EditText
-        android:id="@+id/ETContraActualizar"
-        android:layout_width="wrap_content"
-        android:layout_height="48dp"
-        android:layout_marginTop="36dp"
-        android:background="@drawable/roundedbutton"
-        android:ems="10"
-        android:hint="@string/nuevaContrasenna"
-        android:inputType="textPersonName"
-        android:textAlignment="center"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.502"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ETCorreoActualizar" />
-
-    <EditText
-        android:id="@+id/ETConfirmarContraActualizar"
-        android:layout_width="wrap_content"
-        android:layout_height="48dp"
-        android:layout_marginTop="36dp"
-        android:background="@drawable/roundedbutton"
-        android:ems="10"
-        android:hint="@string/confirmarContrasenna"
-        android:inputType="textPersonName"
-        android:textAlignment="center"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.502"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ETContraActualizar" />
-
-    <Button
-        android:id="@+id/BCambiarFotoActualizar"
-        android:layout_width="250dp"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="20dp"
-        android:background="@drawable/roundedbutton"
-        android:text="@string/cambiarFotoPerfil"
-        android:textColor="#FFFFFF"
-        app:layout_constraintBottom_toTopOf="@+id/BGuardarCambiosActualizar"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <Button
-        android:id="@+id/BGuardarCambiosActualizar"
-        android:layout_width="250dp"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="32dp"
-        android:background="@drawable/roundedbutton"
-        android:text="@string/guardarCambios"
-        android:textColor="#FFFFFF"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="TextContrastCheck" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:fitsSystemWindows="true"
+        app:menu="@menu/side_bar_menu" />
+</androidx.drawerlayout.widget.DrawerLayout>

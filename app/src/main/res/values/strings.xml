@@ -1,5 +1,7 @@
 <resources>
-    <string name="app_name">easykit</string>
+    <string name="app_name">Easykit</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="registro">Registro</string>
     <string name="ingreso">Ingreso</string>
     <string name="nombres">Nombres</string>
@@ -51,13 +53,13 @@
     <string name="siguiente">Siguiente</string>
     <string name="precio_35_000">Precio: $35.000</string>
     <string name="tema_manualidades">Tema: Manualidades</string>
-    <string name="tema_manualidades">Tema: Manualidades</string>
     <string name="precio_45_500">Precio: $45.500</string>
     <string name="precio_55_000">Precio: $55.000</string>
-    <string name="kit_marcadores">Kit Marcadores</string>
     <string name="colegio">Colegio</string>
     <string name="manualidades">Manualidades</string>
     <string name="navide_o">Navideño</string>
     <string name="halloween">Halloween</string>
     <string name="verano">Verano</string>
+    <string name="continuar">continuar</string>
+    <string name="cancelar">cancelar</string>
 </resources>
