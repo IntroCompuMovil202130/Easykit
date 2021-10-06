@@ -62,9 +62,6 @@ public class AutenticacionActivity extends AppCompatActivity {
             Intent intent = new Intent(getBaseContext(),CatalogoActivity.class);
             intent.putExtra("user",currentUser.getEmail());
             startActivity(intent);
-        }else{
-            email.setText("");
-            password.setText("");
         }
     }
 
@@ -86,6 +83,9 @@ public class AutenticacionActivity extends AppCompatActivity {
                     }
                 }
             });
+        }else{
+            email.setText("");
+            password.setText("");
         }
     }
     /*
@@ -102,16 +102,19 @@ public class AutenticacionActivity extends AppCompatActivity {
     public boolean validar(String correo, String contra) {
 
         if (correo.isEmpty() || contra.isEmpty()) {
+            Toast.makeText(AutenticacionActivity.this,"Los campos no pueden ser vacios",Toast.LENGTH_LONG).show();
             return false;
         }
 
         //Email invalido
         if(!validateEmailId(correo)){
+            Toast.makeText(AutenticacionActivity.this,"Email no valido",Toast.LENGTH_LONG).show();
             return false;
         }
 
         //Password no puede tener espacios
         else if(!Pattern.matches("[^ ]*", contra)){
+            Toast.makeText(AutenticacionActivity.this,"La contraseña no puede contener espacios",Toast.LENGTH_LONG).show();
             return false;
         }
 
