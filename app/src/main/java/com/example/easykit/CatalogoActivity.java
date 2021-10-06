@@ -14,16 +14,18 @@ import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
 import com.google.android.material.navigation.NavigationView;
+import com.google.firebase.auth.FirebaseAuth;
 
 public class CatalogoActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
     Button tematicas;
     private DrawerLayout drawerLayout;
+    private FirebaseAuth mAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_catalogo);
-
+//        mAuth = FirebaseAuth.getInstance();
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar((Toolbar) findViewById(R.id.toolbar));
 
@@ -76,8 +78,9 @@ public class CatalogoActivity extends AppCompatActivity implements NavigationVie
                 startActivity(intent);
                 break;
             case R.id.salir:
-                intent = new Intent(this, IngresoActivity.class);
-                startActivity(intent);
+//                intent = new Intent(this, IngresoActivity.class);
+//                startActivity(intent);
+
                 break;
         }
         drawerLayout.closeDrawer(GravityCompat.START);
