@@ -77,7 +77,7 @@ public class AutenticacionActivity extends AppCompatActivity {
                 @Override
                 public void onComplete(@NonNull Task<AuthResult> task) {
                     if(!task.isSuccessful()){
-                        Toast.makeText(AutenticacionActivity.this,task.getException().toString(),Toast.LENGTH_SHORT).show();
+                        Toast.makeText(AutenticacionActivity.this,task.getException().toString(),Toast.LENGTH_LONG).show();
                         email.setText("");
                         password.setText("");
                     }else{

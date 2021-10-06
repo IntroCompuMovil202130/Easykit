@@ -25,7 +25,7 @@ public class CatalogoActivity extends AppCompatActivity implements NavigationVie
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_catalogo);
-//        mAuth = FirebaseAuth.getInstance();
+        mAuth = FirebaseAuth.getInstance();
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar((Toolbar) findViewById(R.id.toolbar));
 
@@ -78,9 +78,9 @@ public class CatalogoActivity extends AppCompatActivity implements NavigationVie
                 startActivity(intent);
                 break;
             case R.id.salir:
-//                intent = new Intent(this, IngresoActivity.class);
-//                startActivity(intent);
-
+                mAuth.signOut();
+                intent = new Intent(this, IngresoActivity.class);
+                startActivity(intent);
                 break;
         }
         drawerLayout.closeDrawer(GravityCompat.START);
