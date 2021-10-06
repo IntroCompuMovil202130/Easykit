@@ -79,6 +79,8 @@ public class AutenticacionActivity extends AppCompatActivity {
                         password.setText("");
                     }else{
                         Intent intent = new Intent(AutenticacionActivity.this, CatalogoActivity.class);
+                        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                         startActivity(intent);
                     }
                 }

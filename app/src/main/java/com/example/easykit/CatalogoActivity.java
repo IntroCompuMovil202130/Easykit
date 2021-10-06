@@ -80,6 +80,8 @@ public class CatalogoActivity extends AppCompatActivity implements NavigationVie
             case R.id.salir:
                 mAuth.signOut();
                 intent = new Intent(this, IngresoActivity.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 startActivity(intent);
                 break;
         }
