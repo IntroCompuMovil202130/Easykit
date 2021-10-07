@@ -42,7 +42,7 @@
                 android:layout_width="350dp"
                 android:layout_height="48dp"
                 android:layout_marginTop="72dp"
-                android:background="@drawable/roundedbutton"
+                android:background="@drawable/button_style"
                 android:ems="10"
                 android:hint="@string/buscar"
                 android:inputType="textPersonName"

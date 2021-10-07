@@ -160,7 +160,7 @@
                             android:layout_marginLeft="12dp"
                             android:layout_marginTop="36dp"
                             android:layout_marginBottom="8dp"
-                            android:background="@drawable/roundedbutton"
+                            android:background="@drawable/button_style"
                             android:text="@string/foto" />
 
                         <Button
@@ -168,7 +168,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="12dp"
-                            android:background="@drawable/roundedbutton"
+                            android:background="@drawable/button_style"
                             android:text="@string/buttonQuitar" />
                     </LinearLayout>
 
@@ -191,7 +191,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginRight="24dp"
                     android:layout_weight="1"
-                    android:background="@drawable/roundedbutton"
+                    android:background="@drawable/button_style"
                     android:text="@string/buttonGuardar" />
 
                 <Button
@@ -199,7 +199,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:background="@drawable/roundedbutton"
+                    android:background="@drawable/button_style"
                     android:text="@string/buttonCancelar" />
             </LinearLayout>
 

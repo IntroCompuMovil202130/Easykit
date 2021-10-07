@@ -45,7 +45,7 @@
                 android:inputType="textPersonName"
                 android:hint="Escriba un mensaje aquí"
                 android:textAlignment="center"
-                android:background="@drawable/roundedbutton"
+                android:background="@drawable/button_style"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.497"

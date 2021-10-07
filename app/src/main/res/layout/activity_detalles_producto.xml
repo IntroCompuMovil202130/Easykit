@@ -79,7 +79,7 @@
                             android:id="@+id/BPreguntas"
                             android:layout_width="130dp"
                             android:layout_height="wrap_content"
-                            android:background="@drawable/roundedbutton"
+                            android:background="@drawable/button_style"
                             android:layout_gravity="center"
                             android:layout_marginTop="10dp"
                             android:onClick="verPreguntas"
@@ -92,7 +92,7 @@
                             android:layout_gravity="center"
                             android:layout_margin="16dp"
                             android:layout_marginBottom="24dp"
-                            android:background="@drawable/roundedbutton"
+                            android:background="@drawable/button_style"
                             android:onClick="pago"
                             android:text="@string/BtnPDC" />
                     </LinearLayout>

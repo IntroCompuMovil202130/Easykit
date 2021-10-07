@@ -22,156 +22,133 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:padding="20dp"
             tools:context=".AgregarProductoActivity">
 
-            <LinearLayout
-                android:id="@+id/linearLayout"
+            <TextView
+                android:id="@+id/TVTematica1Tematicas"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="32dp"
-                android:layout_marginTop="32dp"
-                android:layout_marginEnd="32dp"
-                android:orientation="vertical"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent">
+                android:editable="false"
+                android:text="@string/venta"
+                android:textSize="22sp"
+                tools:layout_editor_absoluteX="32dp"
+                tools:layout_editor_absoluteY="32dp" />
 
-                <TextView
-                    android:id="@+id/TVTematica1Tematicas"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:editable="false"
-                    android:text="@string/venta"
-                    android:textSize="22sp" />
-            </LinearLayout>
+            <TextView
+                android:id="@+id/TVTematica2Tematicas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:editable="false"
+                android:text="@string/name"
+                app:layout_constraintTop_toBottomOf="@+id/TVTematica1Tematicas"
+                tools:layout_editor_absoluteX="52dp" />
 
-            <LinearLayout
-                android:id="@+id/linearLayout2"
+            <EditText
+                android:id="@+id/ETBuscarCatalogo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:hint="@string/hint"
+                android:importantForAutofill="no"
+                android:inputType="textPersonName"
+                app:layout_constraintTop_toBottomOf="@+id/TVTematica2Tematicas"
+                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck,TextContrastCheck"
+                tools:layout_editor_absoluteX="52dp" />
+
+            <Spinner
+                android:id="@+id/STematicas"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:entries="@array/tematicas"
+                app:layout_constraintTop_toBottomOf="@+id/ETBuscarCatalogo"
+                tools:layout_editor_absoluteX="52dp" />
+
+            <TextView
+                android:id="@+id/TVTematica3Tematicas"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="32dp"
-                android:layout_marginTop="32dp"
-                android:layout_marginEnd="32dp"
+                android:editable="false"
+                android:text="@string/description"
+                app:layout_constraintTop_toBottomOf="@+id/STematicas"
+                tools:layout_editor_absoluteX="52dp" />
+
+            <EditText
+                android:id="@+id/ETDescripcionAgregar"
+                android:layout_width="match_parent"
+                android:layout_height="64dp"
+                android:hint="@string/hint2"
+                android:inputType="textMultiLine"
+                app:layout_constraintTop_toBottomOf="@+id/TVTematica3Tematicas"
+                tools:layout_editor_absoluteX="52dp" />
+
+            <LinearLayout
+                android:id="@+id/linearLayout6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+                app:layout_constraintTop_toBottomOf="@+id/ETDescripcionAgregar"
+                tools:layout_editor_absoluteX="52dp">
 
                 <TextView
-                    android:id="@+id/TVTematica2Tematicas"
+                    android:id="@+id/TVTematica4Tematicas"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:editable="false"
-                    android:text="@string/name" />
-
-                <EditText
-                    android:id="@+id/ETBuscarCatalogo"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:ems="10"
-                    android:hint="@string/hint"
-                    android:importantForAutofill="no"
-                    android:inputType="textPersonName"
-                    tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck,TextContrastCheck" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/linearLayout3"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="32dp"
-                android:layout_marginTop="16dp"
-                android:layout_marginEnd="32dp"
-                android:orientation="vertical"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
-
-                <Spinner
-                    android:id="@+id/STematicas"
-                    android:layout_width="match_parent"
-                    android:layout_height="48dp"
-                    android:entries="@array/tematicas" />
-
-                <TextView
-                    android:id="@+id/TVTematica3Tematicas"
-                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="12dp"
+                    android:layout_weight="1"
                     android:editable="false"
-                    android:text="@string/description" />
+                    android:text="@string/precio" />
 
                 <EditText
-                    android:id="@+id/ETDescripcionAgregar"
-                    android:layout_width="match_parent"
-                    android:layout_height="64dp"
-                    android:hint="@string/hint2"
-                    android:inputType="textMultiLine" />
+                    android:id="@+id/ETPrecioAgregar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="48dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:hint="@string/precio2"
+                    android:inputType="numberDecimal" />
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="horizontal">
+            </LinearLayout>
 
-                    <TextView
-                        android:id="@+id/TVTematica4Tematicas"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="12dp"
-                        android:layout_weight="1"
-                        android:editable="false"
-                        android:text="@string/precio" />
+            <LinearLayout
+                android:id="@+id/linearLayout7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout6"
+                tools:layout_editor_absoluteX="52dp">
 
-                    <EditText
-                        android:id="@+id/ETPrecioAgregar"
-                        android:layout_width="wrap_content"
-                        android:layout_height="48dp"
-                        android:layout_marginTop="12dp"
-                        android:layout_weight="1"
-                        android:ems="10"
-                        android:hint="@string/precio2"
-                        android:inputType="numberDecimal" />
+                <ImageView
+                    android:id="@+id/IVBuscarTematicas"
+                    android:layout_width="80dp"
+                    android:layout_height="128dp"
+                    android:layout_marginTop="24dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/kit" />
 
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="horizontal">
-
-                    <ImageView
-                        android:id="@+id/IVBuscarTematicas"
-                        android:layout_width="80dp"
-                        android:layout_height="128dp"
-                        android:layout_marginTop="24dp"
-                        android:layout_weight="1"
-                        app:srcCompat="@drawable/kit" />
-
-                    <Button
-                        android:id="@+id/BAdjuntarFotoCatalogo"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="12dp"
-                        android:layout_marginTop="64dp"
-                        android:background="@drawable/roundedbutton"
-                        android:text="@string/foto" />
-                </LinearLayout>
-
+                <Button
+                    android:id="@+id/BAdjuntarFotoCatalogo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginTop="64dp"
+                    android:background="@drawable/button_style"
+                    android:text="@string/foto" />
             </LinearLayout>
 
             <Button
                 android:id="@+id/BPublicarCatalogo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@drawable/roundedbutton"
+                android:background="@drawable/button_style"
                 android:text="@string/button"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/linearLayout3" />
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout7" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
