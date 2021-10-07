@@ -31,7 +31,8 @@
     <string name="precio">Precio: </string>
     <string name="precio2">COP $ </string>
     <string name="precio3">COP $35.000 </string>
-    <string name="foto">Adjuntar foto</string>
+    <string name="foto">Tomar foto</string>
+    <string name="galeria">Elegir foto</string>
     <string name="ciudad">Bogotá D.C.</string>
     <string name="ubicacion">Ubicación</string>
     <string name="textUbicacion">Encuéntranos!</string>

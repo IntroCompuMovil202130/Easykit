@@ -144,20 +144,39 @@
 
                     <ImageView
                         android:id="@+id/IVBuscarTematicas"
-                        android:layout_width="80dp"
+                        android:layout_width="wrap_content"
                         android:layout_height="128dp"
                         android:layout_marginTop="24dp"
                         android:layout_weight="1"
                         app:srcCompat="@drawable/kit" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
 
-                    <Button
-                        android:id="@+id/BAdjuntarFotoCatalogo"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="12dp"
-                        android:layout_marginTop="64dp"
-                        android:background="@drawable/roundedbutton"
-                        android:text="@string/foto" />
+                        <Button
+                            android:id="@+id/tomarFoto"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="12dp"
+                            android:layout_marginTop="36dp"
+                            android:layout_marginBottom="8dp"
+                            android:background="@drawable/roundedbutton"
+                            android:onClick="tomarFoto"
+                            android:text="@string/foto" />
+
+                        <Button
+                            android:id="@+id/elegirFoto"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="12dp"
+                            android:background="@drawable/roundedbutton"
+                            android:onClick="elegirFoto"
+                            android:text="@string/galeria" />
+                    </LinearLayout>
+
+
                 </LinearLayout>
 
             </LinearLayout>
