@@ -17,10 +17,10 @@
     <string name="buscar">Buscar </string>
     <string name="venta">Venta</string>
     <string name="actualizar">Actualizar</string>
-    <string name="name">Nombre del producto: </string>
+    <string name="name">Nombre del producto</string>
     <string name="name2">Kit escolar</string>
     <string name="button">Publicar</string>
-    <string name="buttonGuardar">Guardar</string>
+    <string name="buttonGuardar">Guardar</string>3
     <string name="buttonCancelar">Cancelar</string>
     <string name="buttonRegresar">Regresar</string>
     <string name="buttonQuitar">Quitar foto</string>
