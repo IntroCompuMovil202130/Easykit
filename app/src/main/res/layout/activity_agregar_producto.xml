@@ -23,7 +23,10 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:padding="20dp"
+            android:paddingStart="32dp"
+            android:paddingTop="16dp"
+            android:paddingEnd="32dp"
+            android:paddingBottom="16dp"
             tools:context=".AgregarProductoActivity">
 
             <ImageView
@@ -84,7 +87,8 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/linearLayout7">
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout7"
+                app:startIconDrawable="@drawable/ic_baseline_text_fields_24">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/ETBuscarCatalogo"
@@ -103,7 +107,9 @@
                 android:hint="@string/description"
                 app:layout_constraintStart_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/TextInputLayout12">
+                app:layout_constraintTop_toBottomOf="@+id/TextInputLayout12"
+                app:startIconDrawable="@drawable/ic_baseline_text_fields_24">
+
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/ETDescripcionAgregar"
