@@ -43,9 +43,6 @@
             android:name=".ModificarProductoActivity"
             android:exported="true" />
         <activity
-            android:name=".ProteccionPagoActivity"
-            android:exported="true" />
-        <activity
             android:name=".PagoActivity"
             android:exported="true" />
         <activity
