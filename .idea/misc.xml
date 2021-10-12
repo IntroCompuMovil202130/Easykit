@@ -19,11 +19,13 @@
         <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.3359375" />
         <entry key="app/src/main/res/drawable/roundedbutton.xml" value="0.3359375" />
         <entry key="app/src/main/res/layout/activity_agregar_producto.xml" value="0.25" />
-        <entry key="app/src/main/res/layout/activity_catalogo.xml" value="0.22708333333333333" />
+        <entry key="app/src/main/res/layout/activity_catalogo.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_maps.xml" value="0.259963768115942" />
         <entry key="app/src/main/res/layout/activity_modificar_producto.xml" value="0.259963768115942" />
         <entry key="app/src/main/res/layout/activity_pago.xml" value="0.17395833333333333" />
+        <entry key="app/src/main/res/layout/activity_ubicacion_pedido.xml" value="0.17395833333333333" />
         <entry key="app/src/main/res/layout/activity_ubicacion_tienda.xml" value="0.254981884057971" />
+        <entry key="app/src/main/res/menu/side_bar_menu.xml" value="0.31979166666666664" />
       </map>
     </option>
   </component>

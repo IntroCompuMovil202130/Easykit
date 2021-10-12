@@ -69,7 +69,7 @@ public class UbicacionPedidoActivity extends FragmentActivity implements OnMapRe
 
 
     private GoogleMap mMap;
-    private ActivityMapsBinding binding;
+    private @NonNull ActivityUbicacionPedidoBinding binding;
 
 
     //Atributos de localizacion
@@ -88,9 +88,7 @@ public class UbicacionPedidoActivity extends FragmentActivity implements OnMapRe
     private LatLng entrega = new LatLng(4.629,-74.064);
 
     //Atributo de locacion Del ususario
-    private Marker orderDir = mMap.addMarker(new MarkerOptions().position(entrega)
-            .title("Ubicación del pedido").icon(BitmapDescriptorFactory
-                    .defaultMarker(BitmapDescriptorFactory.HUE_CYAN)));
+    private Marker orderDir;
 
 
     private List<Polyline> polylines=null;
@@ -112,6 +110,9 @@ public class UbicacionPedidoActivity extends FragmentActivity implements OnMapRe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+        binding = ActivityUbicacionPedidoBinding.inflate(getLayoutInflater());
+        setContentView(binding.getRoot());
+
         requestPermission(this,locationPermission, "No lo podemos localizar sin su permiso",
                 locationid);
 
@@ -122,12 +123,9 @@ public class UbicacionPedidoActivity extends FragmentActivity implements OnMapRe
         mFusedLocationClient = LocationServices.getFusedLocationProviderClient(this);
         locationRequest = createLocationRequest();
         locationCallback = createLocationCallback();
-        Findroutes(actual,entrega);
 
         mGeocoder = new Geocoder(this);
 
-        binding = ActivityMapsBinding.inflate(getLayoutInflater());
-        setContentView(binding.getRoot());
 
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
@@ -142,6 +140,7 @@ public class UbicacionPedidoActivity extends FragmentActivity implements OnMapRe
         super.onResume();
         checkSettingsLocation();
         sensorManager.registerListener(this.lightSensorListener,lightSensor, SensorManager.SENSOR_DELAY_NORMAL);
+
     }
 
     @Override
@@ -174,6 +173,13 @@ public class UbicacionPedidoActivity extends FragmentActivity implements OnMapRe
                     currentLocation = mMap.addMarker(new MarkerOptions().position(actual)
                             .title("Ubicación del pedido").icon(BitmapDescriptorFactory
                                     .defaultMarker(BitmapDescriptorFactory.HUE_AZURE)));
+                    orderDir = mMap.addMarker(new MarkerOptions().position(entrega)
+                            .title("Ubicación del pedido").icon(BitmapDescriptorFactory
+                                    .defaultMarker(BitmapDescriptorFactory.HUE_CYAN)));
+
+                    Findroutes(currentLocation.getPosition(),orderDir.getPosition());
+
+
                     CameraUpdate cameraUpdate = CameraUpdateFactory.newLatLngZoom(actual, 16);
                     mMap.animateCamera(cameraUpdate);
                 }
@@ -187,7 +193,7 @@ public class UbicacionPedidoActivity extends FragmentActivity implements OnMapRe
         if (ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) ==
                 PackageManager.PERMISSION_GRANTED){
             mFusedLocationClient.requestLocationUpdates(locationRequest, locationCallback, null);
-            Findroutes(actual,entrega);
+//            Findroutes(actual,entrega);
         }
     }
 
@@ -243,6 +249,12 @@ public class UbicacionPedidoActivity extends FragmentActivity implements OnMapRe
         mMap.getUiSettings().setZoomControlsEnabled(true);
         mMap.getUiSettings().setZoomGesturesEnabled(true);
         mMap.moveCamera(CameraUpdateFactory.zoomTo(16));
+
+//        orderDir = mMap.addMarker(new MarkerOptions().position(entrega)
+//                .title("Ubicación del pedido").icon(BitmapDescriptorFactory
+//                        .defaultMarker(BitmapDescriptorFactory.HUE_CYAN)));
+//
+//        Findroutes(currentLocation.getPosition(),orderDir.getPosition());
     }
 
 
@@ -335,8 +347,8 @@ public class UbicacionPedidoActivity extends FragmentActivity implements OnMapRe
         return nombre;
     }*/
 
-    public void Findroutes(LatLng Start, LatLng End) {
-        if (Start == null || End == null) {
+    public void Findroutes(LatLng start, LatLng end) {
+        if (start == null || end == null) {
             Toast.makeText(UbicacionPedidoActivity.this, "Unable to get location", Toast.LENGTH_LONG).show();
         } else {
 
@@ -344,7 +356,7 @@ public class UbicacionPedidoActivity extends FragmentActivity implements OnMapRe
                     .travelMode(AbstractRouting.TravelMode.DRIVING)
                     .withListener(this)
                     .alternativeRoutes(true)
-                    .waypoints(Start, End)
+                    .waypoints(start, end)
                     .key("AIzaSyB0IpWk8QNHLAbkvlwvS_cUODg4rGbt7Us")  //also define your api key here.
                     .build();
             routing.execute();
@@ -359,7 +371,7 @@ public class UbicacionPedidoActivity extends FragmentActivity implements OnMapRe
 
     @Override
     public void onRoutingStart() {
-        Toast.makeText(UbicacionPedidoActivity.this,"Finding Route...",Toast.LENGTH_LONG).show();
+//        Toast.makeText(UbicacionPedidoActivity.this,"Finding Route...",Toast.LENGTH_LONG).show();
     }
 
     @Override
@@ -397,16 +409,16 @@ public class UbicacionPedidoActivity extends FragmentActivity implements OnMapRe
         }
 
         //Add Marker on route starting position
-        //MarkerOptions startMarker = new MarkerOptions();
-        //startMarker.position(polylineStartLatLng);
-        //startMarker.title("My Location");
-        //mMap.addMarker(startMarker);
+//        MarkerOptions startMarker = new MarkerOptions();
+//        startMarker.position(polylineStartLatLng);
+//        startMarker.title("My Location");
+//        mMap.addMarker(startMarker);
 
         //Add Marker on route ending position
-        //MarkerOptions endMarker = new MarkerOptions();
-        //endMarker.position(polylineEndLatLng);
-        //endMarker.title("Destination");
-        //mMap.addMarker(endMarker);
+//        MarkerOptions endMarker = new MarkerOptions();
+//        endMarker.position(polylineEndLatLng);
+//        endMarker.title("Destination");
+//        mMap.addMarker(endMarker);
     }
 
     @Override
