@@ -62,4 +62,5 @@
     <string name="verano">Verano</string>
     <string name="continuar">continuar</string>
     <string name="cancelar">cancelar</string>
+    <string name="title_activity_ubicacion_pedido">UbicacionPedidoActivity</string>
 </resources>
