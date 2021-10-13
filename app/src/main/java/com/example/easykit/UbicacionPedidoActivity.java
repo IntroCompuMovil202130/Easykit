@@ -388,7 +388,7 @@ public class UbicacionPedidoActivity extends FragmentActivity implements OnMapRe
             Routing routing = new Routing.Builder()
                     .travelMode(AbstractRouting.TravelMode.DRIVING)
                     .withListener(this)
-                    .alternativeRoutes(true)
+                    .alternativeRoutes(false)
                     .waypoints(start, end)
                     .key("AIzaSyB0IpWk8QNHLAbkvlwvS_cUODg4rGbt7Us")  //also define your api key here.
                     .build();
@@ -412,6 +412,9 @@ public class UbicacionPedidoActivity extends FragmentActivity implements OnMapRe
         CameraUpdate center = CameraUpdateFactory.newLatLng(actual);
         //CameraUpdate zoom = CameraUpdateFactory.zoomTo(16);
         if(routecalculated==true) {
+            for (Polyline pol: polylines) {
+                pol.remove();
+            }
             polylines.clear();
         }
         PolylineOptions polyOptions = new PolylineOptions();
