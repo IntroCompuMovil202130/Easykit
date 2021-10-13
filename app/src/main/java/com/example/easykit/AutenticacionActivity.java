@@ -33,7 +33,13 @@ public class AutenticacionActivity extends AppCompatActivity {
     public static final Pattern VALID_EMAIL_ADDRESS_REGEX =
             Pattern.compile("^[A-Z0-9._%+-]+@[A-Z0-9.-]+\\.[A-Z]{2,6}$", Pattern.CASE_INSENSITIVE);
 
+    /*Admin
+     * email:CamiCapi@gmail.com
+     * clave:Camicapi89
+     *
+     * */
 
+    String admin= "CamiCapi@gmail.com";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -78,10 +84,20 @@ public class AutenticacionActivity extends AppCompatActivity {
                         email.setText("");
                         password.setText("");
                     }else{
-                        Intent intent = new Intent(AutenticacionActivity.this, CatalogoActivity.class);
-                        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                        startActivity(intent);
+                        System.out.println(correo);
+                        if(correo.equals(admin)){
+                            System.out.println("Entro");
+                            Intent intent = new Intent(AutenticacionActivity.this, ChatVendedoresActivity.class);
+                            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                            startActivity(intent);
+                        }else {
+                            System.out.println("No entro");
+                            Intent intent = new Intent(AutenticacionActivity.this, CatalogoActivity.class);
+                            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                            startActivity(intent);
+                        }
                     }
                 }
             });
