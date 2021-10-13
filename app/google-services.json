@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "259325036676",
+    "project_id": "easykit-73e1d",
+    "storage_bucket": "easykit-73e1d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:259325036676:android:cbf7de872f20094a805ad1",
+        "android_client_info": {
+          "package_name": "com.example.easykit"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "259325036676-cd12k53r5a7qg3l7kt67f7fjk3d2kcdl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBN_r1ezMNO4Pj7yxsSYTNoNkjqvKO0wGE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "259325036676-cd12k53r5a7qg3l7kt67f7fjk3d2kcdl.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

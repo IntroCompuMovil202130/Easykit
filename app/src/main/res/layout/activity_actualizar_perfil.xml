@@ -6,6 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
+    android:padding="16dp"
     tools:openDrawer="start">
 
     <LinearLayout
@@ -17,126 +18,214 @@
         <com.google.android.material.appbar.MaterialToolbar
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize" />
+            android:layout_height="?attr/actionBarSize"
+            app:title="Actualizar Perfil" />
 
-        <androidx.constraintlayout.widget.ConstraintLayout
+        <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            tools:context=".ActualizarPerfilActivity">
+            android:layout_height="match_parent">
 
-            <ImageView
-                android:id="@+id/IVfotoPerfil"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="40dp"
-                android:layout_marginEnd="16dp"
-                android:contentDescription="@string/fotoPerfil"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                tools:srcCompat="@tools:sample/avatars" />
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingStart="32dp"
+                android:paddingTop="16dp"
+                android:paddingEnd="32dp"
+                android:paddingBottom="16dp"
+                tools:context=".ActualizarPerfilActivity">
 
-            <EditText
-                android:id="@+id/ETNombresActualizar"
-                android:layout_width="wrap_content"
-                android:layout_height="48dp"
-                android:layout_marginTop="60dp"
-                android:background="@drawable/roundedbutton"
-                android:ems="10"
-                android:hint="@string/nombres"
-                android:inputType="textPersonName"
-                android:textAlignment="center"
-                app:layout_constraintEnd_toStartOf="@+id/IVfotoPerfil"
-                app:layout_constraintHorizontal_bias="0.471"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
 
-            <EditText
-                android:id="@+id/ETApellidosActualizar"
-                android:layout_width="wrap_content"
-                android:layout_height="48dp"
-                android:layout_marginTop="24dp"
-                android:background="@drawable/roundedbutton"
-                android:ems="10"
-                android:hint="@string/apellidos"
-                android:inputType="textPersonName"
-                android:textAlignment="center"
-                app:layout_constraintEnd_toStartOf="@+id/IVfotoPerfil"
-                app:layout_constraintHorizontal_bias="0.471"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/ETNombresActualizar"
-                tools:ignore="TextContrastCheck" />
+                <LinearLayout
+                    android:id="@+id/linearLayout11"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="16dp"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:weightSum="1"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
 
-            <EditText
-                android:id="@+id/ETCorreoActualizar"
-                android:layout_width="wrap_content"
-                android:layout_height="48dp"
-                android:layout_marginTop="52dp"
-                android:background="@drawable/roundedbutton"
-                android:ems="10"
-                android:hint="@string/correo"
-                android:inputType="textPersonName"
-                android:textAlignment="center"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.497"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/ETApellidosActualizar" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="16dp"
+                        android:layout_weight="0.9"
+                        android:orientation="vertical">
 
-            <EditText
-                android:id="@+id/ETContraActualizar"
-                android:layout_width="wrap_content"
-                android:layout_height="48dp"
-                android:layout_marginTop="36dp"
-                android:background="@drawable/roundedbutton"
-                android:ems="10"
-                android:hint="@string/nuevaContrasenna"
-                android:inputType="textPersonName"
-                android:textAlignment="center"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.502"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/ETCorreoActualizar" />
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/TextInputLayout7"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/nombres"
+                            app:startIconDrawable="@drawable/ic_baseline_person_24">
 
-            <EditText
-                android:id="@+id/ETConfirmarContraActualizar"
-                android:layout_width="wrap_content"
-                android:layout_height="48dp"
-                android:layout_marginTop="36dp"
-                android:background="@drawable/roundedbutton"
-                android:ems="10"
-                android:hint="@string/confirmarContrasenna"
-                android:inputType="textPersonName"
-                android:textAlignment="center"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.502"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/ETContraActualizar" />
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/ETNombresActualizar"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:inputType="textPersonName" />
 
-            <Button
-                android:id="@+id/BCambiarFotoActualizar"
-                android:layout_width="250dp"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="20dp"
-                android:background="@drawable/roundedbutton"
-                android:text="@string/cambiarFotoPerfil"
-                android:textColor="#FFFFFF"
-                app:layout_constraintBottom_toTopOf="@+id/BGuardarCambiosActualizar"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent" />
+                        </com.google.android.material.textfield.TextInputLayout>
 
-            <Button
-                android:id="@+id/BGuardarCambiosActualizar"
-                android:layout_width="250dp"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="32dp"
-                android:background="@drawable/roundedbutton"
-                android:text="@string/guardarCambios"
-                android:textColor="#FFFFFF"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.498"
-                app:layout_constraintStart_toStartOf="parent"
-                tools:ignore="TextContrastCheck" />
-        </androidx.constraintlayout.widget.ConstraintLayout>
+                        <View
+                            android:id="@+id/divider19"
+                            android:layout_width="match_parent"
+                            android:layout_height="16dp" />
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/TextInputLayout8"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/apellidos"
+                            app:startIconDrawable="@drawable/ic_baseline_person_24">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/ETApellidosActualizar"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:inputType="textPersonName" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+                    </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/IVfotoPerfil"
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:layout_weight="0.1"
+                        android:contentDescription="@string/fotoPerfil"
+                        app:srcCompat="@drawable/ic_baseline_person_24" />
+                </LinearLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/TextInputLayout9"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:hint="@string/correo"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.497"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/linearLayout11"
+                    app:startIconDrawable="@drawable/ic_baseline_alternate_email_24">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/ETCorreoActualizar"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textWebEmailAddress" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/TextInputLayout70"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:hint="Dirección para Entregas"
+                    app:layout_constraintTop_toBottomOf="@+id/TextInputLayout9"
+                    app:startIconDrawable="@drawable/ic_baseline_house_24"
+                    tools:layout_editor_absoluteX="32dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/ETDireccionActualizar"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPersonName" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/TextInputLayout10"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="18dp"
+                    android:hint="@string/nuevaContrasenna"
+                    app:counterEnabled="true"
+                    app:counterMaxLength="20"
+                    app:endIconMode="password_toggle"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.502"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/TextInputLayout70"
+                    app:startIconDrawable="@drawable/ic_baseline_lock_24">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/ETContraActualizar"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPassword" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/TextInputLayout11"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:hint="@string/confirmarContrasenna"
+                    app:counterEnabled="true"
+                    app:counterMaxLength="20"
+                    app:endIconMode="password_toggle"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.502"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/TextInputLayout10"
+                    app:startIconDrawable="@drawable/ic_baseline_lock_24">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/ETConfirmarContraActualizar"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPassword" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:orientation="vertical"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/TextInputLayout11">
+
+                    <Button
+                        android:id="@+id/BCambiarFotoActualizar"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/button_style"
+                        android:text="@string/cambiarFotoPerfil"
+                        android:textColor="#FFFFFF" />
+
+                    <Space
+                        android:layout_width="match_parent"
+                        android:layout_height="16dp" />
+
+                    <Button
+                        android:id="@+id/BGuardarCambiosActualizar"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/button_style"
+                        android:text="@string/guardarCambios"
+                        android:textColor="#FFFFFF"
+                        tools:ignore="TextContrastCheck" />
+                </LinearLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </ScrollView>
 
     </LinearLayout>
 

@@ -2,12 +2,11 @@
 <resources>
     <string-array name="tematicas">
 
-        <item>Temáticas</item>
         <item>Manualidades</item>
         <item>Colegio</item>
-        <item>Navideño</item>
-        <item>Halloween</item>
-        <item>Verano</item>
+        <item>Arte</item>
+        <item>Pintura</item>
+        <item>Didáctico</item>
 
     </string-array>
 

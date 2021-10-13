@@ -1,39 +1,90 @@
 package com.example.easykit;
 
 import android.content.Intent;
+import android.content.res.Resources;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.Button;
+import android.widget.ListView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.core.content.res.ResourcesCompat;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
+import com.example.adapters.AdapterProducto;
+import com.example.models.Kit;
 import com.google.android.material.navigation.NavigationView;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+
+import java.io.IOException;
+import java.util.ArrayList;
 
 public class CatalogoActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
     Button tematicas;
     private DrawerLayout drawerLayout;
+    private FirebaseAuth mAuth;
+    FirebaseUser currentUser;
+    String admin = "camicapi@gmail.com";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_catalogo);
+        mAuth = FirebaseAuth.getInstance();
+        currentUser = mAuth.getCurrentUser();
 
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar((Toolbar) findViewById(R.id.toolbar));
-
         drawerLayout = findViewById(R.id.drawer_layout);
-        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawerLayout, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
+        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawerLayout, toolbar,
+                R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawerLayout.addDrawerListener(toggle);
         toggle.syncState();
 
         NavigationView navigationView = findViewById(R.id.navigation_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+        try {
+            inicializarListaProductos();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    private void inicializarListaProductos() throws IOException {
+        Resources res = getResources();
+        Drawable d = ResourcesCompat.getDrawable(res, R.drawable.kit, null);
+
+        ArrayList<Kit> kits = new ArrayList<Kit>();
+        kits.add(new Kit(0, "Kit 1", "Kit #1", d, 15400));
+        kits.add(new Kit(0, "Kit 2", "Kit #2", d, 15400));
+        kits.add(new Kit(0, "Kit 3", "Kit #3", d, 15400));
+        kits.add(new Kit(0, "Kit 4", "Kit #4", d, 15400));
+        kits.add(new Kit(0, "Kit 5", "Kit #5", d, 15400));
+
+        AdapterProducto adapterKit = new AdapterProducto(this, kits);
+
+        ListView lv = (ListView) findViewById(R.id.LVlistaKits);
+
+        lv.setAdapter(adapterKit);
+
+        lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Intent intent = new Intent(CatalogoActivity.this, DetallesProductoActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
     public void detalle(View view) {
@@ -50,10 +101,11 @@ public class CatalogoActivity extends AppCompatActivity implements NavigationVie
         }
     }
 
-
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
         Intent intent;
+        System.out.println("EMAIL" + currentUser.getEmail());
+
         switch (menuItem.getItemId()) {
             case R.id.catalogoProductos:
                 intent = new Intent(this, CatalogoActivity.class);
@@ -68,15 +120,34 @@ public class CatalogoActivity extends AppCompatActivity implements NavigationVie
                 startActivity(intent);
                 break;
             case R.id.ubicacion:
-                intent = new Intent(this, UbicacionTiendaActivity.class);
+                intent = new Intent(this, UbicacionPedidoActivity.class);
                 startActivity(intent);
                 break;
             case R.id.chat:
                 intent = new Intent(this, ChatVendedoresActivity.class);
                 startActivity(intent);
                 break;
+            case R.id.agregar:
+                if (currentUser.getEmail().equals(admin)) {
+                    intent = new Intent(this, AgregarProductoActivity.class);
+                    startActivity(intent);
+                } else {
+                    Toast.makeText(this, "opción de administrador no permitida", Toast.LENGTH_SHORT).show();
+                }
+                break;
+            case R.id.modificar:
+                if (currentUser.getEmail().equals(admin)) {
+                    intent = new Intent(this, ModificarProductoActivity.class);
+                    startActivity(intent);
+                } else {
+                    Toast.makeText(this, "opción de administrador no permitida", Toast.LENGTH_SHORT).show();
+                }
+                break;
             case R.id.salir:
+                mAuth.signOut();
                 intent = new Intent(this, IngresoActivity.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 startActivity(intent);
                 break;
         }
@@ -85,8 +156,34 @@ public class CatalogoActivity extends AppCompatActivity implements NavigationVie
         return true;
     }
 
-    public void mostrarTematicas(View view){
-        Intent intent=new Intent(this,DespliegueTematicasActivity.class);
-        startActivity(intent);
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.category_menu, menu);
+        return true;
     }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem menuItem) {
+
+        switch (menuItem.getItemId()) {
+            case R.id.FiltroManualidades:
+                // Aplicar filtro
+                break;
+            case R.id.FiltroColegio:
+                // Aplicar filtro
+                break;
+            case R.id.FiltroArte:
+                // Aplicar filtro
+                break;
+            case R.id.FiltroPinturas:
+                // Aplicar filtro
+                break;
+            case R.id.FiltroDidacticos:
+                // Aplicar filtro
+                break;
+        }
+        drawerLayout.closeDrawer(GravityCompat.START);
+        return true;
+    }
+
 }

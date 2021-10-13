@@ -51,6 +51,24 @@
         android:id="@+id/group6"
         android:checkableBehavior="single">
         <item
+            android:id="@+id/agregar"
+            android:icon="@drawable/ic_baseline_add_24"
+            android:title="Agregar"
+            app:showAsAction="never" />
+    </group>
+    <group
+        android:id="@+id/group7"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/modificar"
+            android:icon="@drawable/ic_baseline_brush_24"
+            android:title="Modificar"
+            app:showAsAction="never" />
+    </group>
+    <group
+        android:id="@+id/group8"
+        android:checkableBehavior="single">
+        <item
             android:id="@+id/salir"
             android:icon="@drawable/ic_logout"
             android:title="Salir"

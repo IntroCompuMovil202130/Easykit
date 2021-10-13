@@ -17,10 +17,10 @@
     <string name="buscar">Buscar </string>
     <string name="venta">Venta</string>
     <string name="actualizar">Actualizar</string>
-    <string name="name">Nombre del producto: </string>
+    <string name="name">Nombre del producto</string>
     <string name="name2">Kit escolar</string>
     <string name="button">Publicar</string>
-    <string name="buttonGuardar">Guardar</string>
+    <string name="buttonGuardar">Guardar</string>3
     <string name="buttonCancelar">Cancelar</string>
     <string name="buttonRegresar">Regresar</string>
     <string name="buttonQuitar">Quitar foto</string>
@@ -31,7 +31,8 @@
     <string name="precio">Precio: </string>
     <string name="precio2">COP $ </string>
     <string name="precio3">COP $35.000 </string>
-    <string name="foto">Adjuntar foto</string>
+    <string name="foto">Tomar foto</string>
+    <string name="galeria">Elegir foto</string>
     <string name="ciudad">Bogotá D.C.</string>
     <string name="ubicacion">Ubicación</string>
     <string name="textUbicacion">Encuéntranos!</string>
@@ -62,4 +63,5 @@
     <string name="verano">Verano</string>
     <string name="continuar">continuar</string>
     <string name="cancelar">cancelar</string>
+    <string name="title_activity_ubicacion_pedido">UbicacionPedidoActivity</string>
 </resources>

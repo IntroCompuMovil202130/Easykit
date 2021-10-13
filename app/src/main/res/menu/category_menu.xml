@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <group
+        android:id="@+id/group1">
+        <item
+            android:id="@+id/FiltroManualidades"
+            android:icon="@drawable/ic_baseline_house_24"
+            android:title="Manualidades"
+            app:showAsAction="never" />
+    </group>
+    <group
+        android:id="@+id/group2">
+        <item
+            android:id="@+id/FiltroColegio"
+            android:icon="@drawable/ic_baseline_house_24"
+            android:title="Colegio"
+            app:showAsAction="never" />
+    </group>
+    <group
+        android:id="@+id/group3">
+        <item
+            android:id="@+id/FiltroArte"
+            android:icon="@drawable/ic_baseline_house_24"
+            android:title="Arte"
+            app:showAsAction="never" />
+    </group>
+    <group
+        android:id="@+id/group4">
+        <item
+            android:id="@+id/FiltroPinturas"
+            android:icon="@drawable/ic_baseline_house_24"
+            android:title="Pinturas"
+            app:showAsAction="never" />
+    </group>
+    <group
+        android:id="@+id/group5">
+        <item
+            android:id="@+id/FiltroDidacticos"
+            android:icon="@drawable/ic_baseline_house_24"
+            android:title="Didácticos"
+            app:showAsAction="never" />
+    </group>
+</menu>

@@ -3,6 +3,7 @@ package com.example.easykit;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
@@ -12,11 +13,16 @@ import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
 import com.google.android.material.navigation.NavigationView;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 public class PedidosActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
     private DrawerLayout drawerLayout;
+    FirebaseUser currentUser;
+    private FirebaseAuth mAuth;
 
+    String admin= "camicapi@gmail.com";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,7 +30,8 @@ public class PedidosActivity extends AppCompatActivity implements NavigationView
 
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar((Toolbar) findViewById(R.id.toolbar));
-
+        mAuth = FirebaseAuth.getInstance();
+        currentUser = mAuth.getCurrentUser();
         drawerLayout = findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawerLayout, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawerLayout.addDrawerListener(toggle);
@@ -60,12 +67,28 @@ public class PedidosActivity extends AppCompatActivity implements NavigationView
                 startActivity(intent);
                 break;
             case R.id.ubicacion:
-                intent = new Intent(this, UbicacionTiendaActivity.class);
+                intent = new Intent(this, UbicacionPedidoActivity.class);
                 startActivity(intent);
                 break;
             case R.id.chat:
                 intent = new Intent(this, ChatVendedoresActivity.class);
                 startActivity(intent);
+                break;
+            case R.id.agregar:
+                if(currentUser.getEmail().equals(admin)){
+                    intent = new Intent(this, AgregarProductoActivity.class);
+                    startActivity(intent);
+                }else{
+                    Toast.makeText(this,"opción de administrador no permitida",Toast.LENGTH_SHORT).show();
+                }
+                break;
+            case R.id.modificar:
+                if(currentUser.getEmail().equals(admin)){
+                    intent = new Intent(this, ModificarProductoActivity.class);
+                    startActivity(intent);
+                }else{
+                    Toast.makeText(this,"opción de administrador no permitida",Toast.LENGTH_SHORT).show();
+                }
                 break;
             case R.id.salir:
                 intent = new Intent(this, IngresoActivity.class);
