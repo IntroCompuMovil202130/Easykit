@@ -99,6 +99,7 @@ public class UbicacionPedidoActivity extends FragmentActivity implements OnMapRe
     boolean isGPSEnabled = false;
 
     boolean routecalculated = false;
+    boolean destinyPoint = false;
 
     String locationPermission = Manifest.permission.ACCESS_FINE_LOCATION;
 
@@ -189,10 +190,13 @@ public class UbicacionPedidoActivity extends FragmentActivity implements OnMapRe
                     actual = new LatLng(location.getLatitude(), location.getLongitude());
                     currentLocation = mMap.addMarker(new MarkerOptions().position(actual)
                             .title("Ubicación del pedido").icon(BitmapDescriptorFactory
-                                    .defaultMarker(BitmapDescriptorFactory.HUE_AZURE)));
-                    orderDir = mMap.addMarker(new MarkerOptions().position(entrega)
-                            .title("Ubicación del pedido").icon(BitmapDescriptorFactory
-                                    .defaultMarker(BitmapDescriptorFactory.HUE_CYAN)));
+                                    .fromResource(R.drawable.package_img30s)));
+                    if(destinyPoint == false){
+                        orderDir = mMap.addMarker(new MarkerOptions().position(entrega)
+                                .title("Ubicación del pedido").icon(BitmapDescriptorFactory
+                                .fromResource(R.drawable.bandera_cuadros30s)));
+
+                    }
 
                     Findroutes(currentLocation.getPosition(),orderDir.getPosition());
 
@@ -428,8 +432,8 @@ public class UbicacionPedidoActivity extends FragmentActivity implements OnMapRe
 
             if(i==shortestRouteIndex)
             {
-                polyOptions.color(getResources().getColor(R.color.purple_200));
-                polyOptions.width(7);
+                polyOptions.color(getResources().getColor(R.color.cyan));
+                polyOptions.width(10);
                 polyOptions.addAll(route.get(shortestRouteIndex).getPoints());
                 Polyline polyline = mMap.addPolyline(polyOptions);
                 polylineStartLatLng=polyline.getPoints().get(0);
