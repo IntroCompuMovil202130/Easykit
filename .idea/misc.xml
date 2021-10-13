@@ -13,6 +13,7 @@
         <entry key="..\:/Documentos/8vo/CompuMovil/Proyecto/Easykit/app/src/main/res/layout/activity_actualizar_perfil.xml" value="0.33" />
         <entry key="..\:/Documentos/8vo/CompuMovil/Proyecto/Easykit/app/src/main/res/layout/activity_ingreso.xml" value="0.33" />
         <entry key="..\:/Documentos/8vo/CompuMovil/Proyecto/Easykit/app/src/main/res/layout/activity_main.xml" value="0.33" />
+        <entry key="..\:/Documentos/8vo/CompuMovil/Proyecto/Easykit/app/src/main/res/layout/activity_maps.xml" value="0.3625" />
         <entry key="..\:/Documentos/8vo/CompuMovil/Proyecto/Easykit/app/src/main/res/layout/activity_registro.xml" value="0.33" />
         <entry key="..\:/Documentos/8vo/CompuMovil/Proyecto/Easykit/app/src/main/res/layout/roundedbutton.xml" value="0.16489361702127658" />
         <entry key="..\:/Juanpa/U/Semestre 8/Computacion movil/Proyecto/Easykit/app/src/main/res/drawable/item_producto.xml" value="0.3537037037037037" />
@@ -41,11 +42,13 @@
         <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.3359375" />
         <entry key="app/src/main/res/drawable/roundedbutton.xml" value="0.3359375" />
         <entry key="app/src/main/res/layout/activity_agregar_producto.xml" value="0.25" />
-        <entry key="app/src/main/res/layout/activity_catalogo.xml" value="0.22708333333333333" />
+        <entry key="app/src/main/res/layout/activity_catalogo.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_maps.xml" value="0.259963768115942" />
         <entry key="app/src/main/res/layout/activity_modificar_producto.xml" value="0.259963768115942" />
         <entry key="app/src/main/res/layout/activity_pago.xml" value="0.17395833333333333" />
+        <entry key="app/src/main/res/layout/activity_ubicacion_pedido.xml" value="0.17395833333333333" />
         <entry key="app/src/main/res/layout/activity_ubicacion_tienda.xml" value="0.254981884057971" />
+        <entry key="app/src/main/res/menu/side_bar_menu.xml" value="0.31979166666666664" />
       </map>
     </option>
   </component>
