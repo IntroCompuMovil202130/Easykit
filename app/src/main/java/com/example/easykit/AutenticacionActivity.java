@@ -84,20 +84,10 @@ public class AutenticacionActivity extends AppCompatActivity {
                         email.setText("");
                         password.setText("");
                     }else{
-                        System.out.println(correo);
-                        if(correo.equals(admin)){
-                            System.out.println("Entro");
-                            Intent intent = new Intent(AutenticacionActivity.this, ChatVendedoresActivity.class);
-                            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                            startActivity(intent);
-                        }else {
-                            System.out.println("No entro");
                             Intent intent = new Intent(AutenticacionActivity.this, CatalogoActivity.class);
                             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                             intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                             startActivity(intent);
-                        }
                     }
                 }
             });

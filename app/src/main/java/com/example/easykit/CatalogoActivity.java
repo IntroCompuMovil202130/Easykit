@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
@@ -31,6 +32,7 @@ public class CatalogoActivity extends AppCompatActivity implements NavigationVie
         setContentView(R.layout.activity_catalogo);
         mAuth = FirebaseAuth.getInstance();
         currentUser = mAuth.getCurrentUser();
+
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar((Toolbar) findViewById(R.id.toolbar));
         drawerLayout = findViewById(R.id.drawer_layout);
@@ -84,12 +86,20 @@ public class CatalogoActivity extends AppCompatActivity implements NavigationVie
                 startActivity(intent);
                 break;
             case R.id.agregar:
-                intent = new Intent(this, AgregarProductoActivity.class);
-                startActivity(intent);
+                if(currentUser.getEmail().equals(admin)){
+                    intent = new Intent(this, AgregarProductoActivity.class);
+                    startActivity(intent);
+                }else{
+                    Toast.makeText(this,"opción de administrador no permitida",Toast.LENGTH_SHORT).show();
+                }
                 break;
             case R.id.modificar:
-                intent = new Intent(this, ModificarProductoActivity.class);
-                startActivity(intent);
+                if(currentUser.getEmail().equals(admin)){
+                    intent = new Intent(this, ModificarProductoActivity.class);
+                    startActivity(intent);
+                }else{
+                    Toast.makeText(this,"opción de administrador no permitida",Toast.LENGTH_SHORT).show();
+                }
                 break;
             case R.id.salir:
                 mAuth.signOut();
