@@ -139,18 +139,6 @@ public class UbicacionPedidoActivity extends FragmentActivity implements OnMapRe
         mapFragment.getMapAsync(this);
 
 
-        sensorManager2 = (SensorManager) getSystemService(this.SENSOR_SERVICE);
-        proximitySensor = sensorManager2.getDefaultSensor(Sensor.TYPE_PROXIMITY);
-        if (proximitySensor == null) {
-            Toast.makeText(this, "No proximity sensor found in device.", Toast.LENGTH_SHORT).show();
-            finish();
-        } else {
-            // registering our sensor with sensor manager.
-            sensorManager2.registerListener(proximitySensorEventListener,
-                    proximitySensor,
-                    SensorManager.SENSOR_DELAY_NORMAL);
-        }
-
     }
 
     @Override
@@ -158,6 +146,18 @@ public class UbicacionPedidoActivity extends FragmentActivity implements OnMapRe
         super.onResume();
         checkSettingsLocation();
         sensorManager.registerListener(this.lightSensorListener,lightSensor, SensorManager.SENSOR_DELAY_NORMAL);
+
+//        sensorManager2 = (SensorManager) getSystemService(this.SENSOR_SERVICE);
+//        proximitySensor = sensorManager2.getDefaultSensor(Sensor.TYPE_PROXIMITY);
+//        if (proximitySensor == null) {
+//            Toast.makeText(this, "No proximity sensor found in device.", Toast.LENGTH_SHORT).show();
+//            finish();
+//        } else {
+//            // registering our sensor with sensor manager.
+//            sensorManager2.registerListener(proximitySensorEventListener,
+//                    proximitySensor,
+//                    SensorManager.SENSOR_DELAY_NORMAL);
+//        }
 
     }
 
@@ -201,7 +201,7 @@ public class UbicacionPedidoActivity extends FragmentActivity implements OnMapRe
                     Findroutes(currentLocation.getPosition(),orderDir.getPosition());
 
 
-                    CameraUpdate cameraUpdate = CameraUpdateFactory.newLatLngZoom(actual, 16);
+                    CameraUpdate cameraUpdate = CameraUpdateFactory.newLatLng(actual);
                     mMap.animateCamera(cameraUpdate);
                 }
 
@@ -333,22 +333,22 @@ public class UbicacionPedidoActivity extends FragmentActivity implements OnMapRe
         return sen;
     }
 
-    SensorEventListener proximitySensorEventListener = new SensorEventListener() {
-        @Override
-        public void onAccuracyChanged(Sensor sensor, int accuracy) {
-            // method to check accuracy changed in sensor.
-        }
-        @Override
-        public void onSensorChanged(SensorEvent event) {
-            if (event.sensor.getType() == Sensor.TYPE_PROXIMITY) {
-                if (event.values[0] == 0) {
-                    mMap.moveCamera(CameraUpdateFactory.zoomTo(20));
-                } else {
-                    mMap.moveCamera(CameraUpdateFactory.zoomTo(18));
-                }
-            }
-        }
-    };
+//    SensorEventListener proximitySensorEventListener = new SensorEventListener() {
+//        @Override
+//        public void onAccuracyChanged(Sensor sensor, int accuracy) {
+//            // method to check accuracy changed in sensor.
+//        }
+//        @Override
+//        public void onSensorChanged(SensorEvent event) {
+//            if (event.sensor.getType() == Sensor.TYPE_PROXIMITY) {
+//                if (event.values[0] == 0) {
+//                    mMap.moveCamera(CameraUpdateFactory.zoomTo(20));
+//                } else {
+//                    mMap.moveCamera(CameraUpdateFactory.zoomTo(18));
+//                }
+//            }
+//        }
+//    };
 
 /*
     private LatLng searchByname(String direccion){
