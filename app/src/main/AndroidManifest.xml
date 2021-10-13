@@ -2,13 +2,53 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.easykit">
 
+    <!--
+         The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
+         Google Maps Android API v2, but you must specify either coarse or fine
+         location permissions for the "MyLocation" functionality.
+    -->
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.hardware.sensor.proximity" />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Easykit">
+        android:theme="@style/Theme.EasykitNoActionBar">
+
+        <!--
+             The API key for Google Maps-based APIs is defined as a string resource.
+             (See the file "res/values/google_maps_api.xml").
+             Note that the API key is linked to the encryption key used to sign the APK.
+             You need a different API key for each encryption key, including the release key that is used to
+             sign the APK for publishing.
+             You can define the keys for the debug and release targets in src/debug/ and src/release/.
+        -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+
+        <meta-data android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <activity
+            android:name=".UbicacionPedidoActivity"
+            android:exported="true"
+            android:label="@string/title_activity_ubicacion_pedido" />
+        <activity
+            android:name=".PedidosActivity"
+            android:exported="true" />
         <activity
             android:name=".UbicacionTiendaActivity"
             android:exported="true" />
@@ -19,19 +59,10 @@
             android:name=".ModificarProductoActivity"
             android:exported="true" />
         <activity
-            android:name=".ProteccionPagoActivity"
-            android:exported="true" />
-        <activity
             android:name=".PagoActivity"
             android:exported="true" />
         <activity
-            android:name=".DespliegueTematicasActivity"
-            android:exported="true" />
-        <activity
             android:name=".CalificacionProductosActivity"
-            android:exported="true" />
-        <activity
-            android:name=".SideBarMenuActivity"
             android:exported="true" />
         <activity
             android:name=".DetallesProductoActivity"
@@ -47,25 +78,24 @@
             android:exported="true" />
         <activity
             android:name=".AutenticacionActivity"
-            android:exported="true" />
+            android:exported="true"
+            android:theme="@style/Theme.EasykitNoActionBar" />
         <activity
             android:name=".RegistroActivity"
-            android:exported="true" />
+            android:exported="true"
+            android:theme="@style/Theme.EasykitNoActionBar" />
         <activity
             android:name=".IngresoActivity"
-            android:exported="true" />
-        <activity
-            android:name=".PreguntasProductoActivity"
-            android:exported="true" />
-        <activity
-            android:name=".MainActivity"
-            android:exported="true">
+            android:exported="true"
+            android:theme="@style/Theme.EasykitNoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".PreguntasProductoActivity"
+            android:exported="true" />
     </application>
 
 </manifest>
