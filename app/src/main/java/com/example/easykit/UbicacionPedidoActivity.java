@@ -155,7 +155,6 @@ public class UbicacionPedidoActivity extends FragmentActivity implements OnMapRe
         super.onResume();
         checkSettingsLocation();
         sensorManager.registerListener(this.lightSensorListener,lightSensor, SensorManager.SENSOR_DELAY_NORMAL);
-        sensorManager2.registerListener(this.proximitySensorEventListener,proximitySensor,SensorManager.SENSOR_DELAY_NORMAL);
 
     }
 
@@ -164,7 +163,6 @@ public class UbicacionPedidoActivity extends FragmentActivity implements OnMapRe
         super.onPause();
         stopLocationUpdates();
         sensorManager.unregisterListener(this.lightSensorListener);
-        sensorManager2.unregisterListener(this.proximitySensorEventListener);
     }
 
     private LocationRequest createLocationRequest(){
@@ -316,12 +314,10 @@ public class UbicacionPedidoActivity extends FragmentActivity implements OnMapRe
                 if (mMap!= null) {
                     if (event.values[0] < 120) {
                         Log.i("MAPS", "DARK MAP " + event.values[0]);
-                        //mMap.setMapStyle(MapStyleOptions.loadRawResourceStyle(UbicacionPedidoActivity
-                          //              .this, R.raw.darkmap));
+                        mMap.setMapStyle(MapStyleOptions.loadRawResourceStyle(UbicacionPedidoActivity.this, R.raw.darktheme));
                     } else {
                         Log.i("MAPS", "LIGHT MAP " + event.values[0]);
-                        //mMap.setMapStyle(MapStyleOptions.loadRawResourceStyle(UbicacionPedidoActivity
-                          //              .this, R.raw.lightmap));
+                        mMap.setMapStyle(MapStyleOptions.loadRawResourceStyle(UbicacionPedidoActivity.this, R.raw.lighttheme));
                     }
                 }
             }
