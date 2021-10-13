@@ -15,18 +15,25 @@ import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
 import com.google.android.material.navigation.NavigationView;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 import android.os.Bundle;
+import android.widget.Toast;
 
 public class ActualizarPerfilActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
     private DrawerLayout drawerLayout;
+    private FirebaseAuth mAuth;
 
+    FirebaseUser currentUser;
+    String admin= "camicapi@gmail.com";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_actualizar_perfil);
-
+        mAuth = FirebaseAuth.getInstance();
+        currentUser = mAuth.getCurrentUser();
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar((Toolbar) findViewById(R.id.toolbar));
 
@@ -71,6 +78,22 @@ public class ActualizarPerfilActivity extends AppCompatActivity implements Navig
             case R.id.chat:
                 intent = new Intent(this, ChatVendedoresActivity.class);
                 startActivity(intent);
+                break;
+            case R.id.agregar:
+                if(currentUser.getEmail().equals(admin)){
+                    intent = new Intent(this, AgregarProductoActivity.class);
+                    startActivity(intent);
+                }else{
+                    Toast.makeText(this,"opción de administrador no permitida",Toast.LENGTH_SHORT).show();
+                }
+                break;
+            case R.id.modificar:
+                if(currentUser.getEmail().equals(admin)){
+                    intent = new Intent(this, ModificarProductoActivity.class);
+                    startActivity(intent);
+                }else{
+                    Toast.makeText(this,"opción de administrador no permitida",Toast.LENGTH_SHORT).show();
+                }
                 break;
             case R.id.salir:
                 intent = new Intent(this, IngresoActivity.class);

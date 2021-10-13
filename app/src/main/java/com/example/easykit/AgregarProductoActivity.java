@@ -31,6 +31,8 @@ import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
 import com.google.android.material.navigation.NavigationView;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 import java.io.FileNotFoundException;
 import java.io.InputStream;
@@ -38,7 +40,10 @@ import java.io.InputStream;
 public class AgregarProductoActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
     private DrawerLayout drawerLayout;
+    FirebaseUser currentUser;
+    private FirebaseAuth mAuth;
 
+    String admin= "camicapi@gmail.com";
     ImageView imagen;
     String permisoCamara = Manifest.permission.CAMERA;
     String permisoGaleria = Manifest.permission.READ_EXTERNAL_STORAGE;
@@ -52,7 +57,8 @@ public class AgregarProductoActivity extends AppCompatActivity implements Naviga
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_agregar_producto);
-
+        mAuth = FirebaseAuth.getInstance();
+        currentUser = mAuth.getCurrentUser();
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar((Toolbar) findViewById(R.id.toolbar));
 
@@ -67,7 +73,7 @@ public class AgregarProductoActivity extends AppCompatActivity implements Naviga
 
     }
 
-    public void tomarFoto(View view){
+    public void tomarFotos(View view){
         if(ActivityCompat.checkSelfPermission(this,permisoCamara)!= PackageManager.PERMISSION_GRANTED){
             pedirPermiso(this,permisoCamara,"",idPermisoCamara);
         }else{
@@ -87,7 +93,7 @@ public class AgregarProductoActivity extends AppCompatActivity implements Naviga
         }
     }
 
-    public void elegirFoto(View view){
+    public void elegirFotos(View view){
         if(ActivityCompat.checkSelfPermission(this,permisoGaleria)!= PackageManager.PERMISSION_GRANTED){
             pedirPermiso(this,permisoGaleria,"",idPermisoGaleria);
         }else{
@@ -179,6 +185,22 @@ public class AgregarProductoActivity extends AppCompatActivity implements Naviga
             case R.id.chat:
                 intent = new Intent(this, ChatVendedoresActivity.class);
                 startActivity(intent);
+                break;
+            case R.id.agregar:
+                if(currentUser.getEmail().equals(admin)){
+                    intent = new Intent(this, AgregarProductoActivity.class);
+                    startActivity(intent);
+                }else{
+                    Toast.makeText(this,"opción de administrador no permitida",Toast.LENGTH_SHORT).show();
+                }
+                break;
+            case R.id.modificar:
+                if(currentUser.getEmail().equals(admin)){
+                    intent = new Intent(this, ModificarProductoActivity.class);
+                    startActivity(intent);
+                }else{
+                    Toast.makeText(this,"opción de administrador no permitida",Toast.LENGTH_SHORT).show();
+                }
                 break;
             case R.id.salir:
                 intent = new Intent(this, IngresoActivity.class);

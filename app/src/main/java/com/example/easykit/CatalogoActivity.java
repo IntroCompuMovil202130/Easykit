@@ -13,6 +13,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
@@ -31,22 +32,27 @@ import com.squareup.picasso.Target;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import com.google.firebase.auth.FirebaseUser;
 
 public class CatalogoActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
     Button tematicas;
     private DrawerLayout drawerLayout;
     private FirebaseAuth mAuth;
+    FirebaseUser currentUser;
+    String admin = "camicapi@gmail.com";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_catalogo);
         mAuth = FirebaseAuth.getInstance();
+        currentUser = mAuth.getCurrentUser();
+
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar((Toolbar) findViewById(R.id.toolbar));
-
         drawerLayout = findViewById(R.id.drawer_layout);
-        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawerLayout, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
+        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawerLayout, toolbar,
+                R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawerLayout.addDrawerListener(toggle);
         toggle.syncState();
 
@@ -59,7 +65,6 @@ public class CatalogoActivity extends AppCompatActivity implements NavigationVie
             e.printStackTrace();
         }
     }
-
 
     private void inicializarListaProductos() throws IOException {
         Resources res = getResources();
@@ -102,6 +107,8 @@ public class CatalogoActivity extends AppCompatActivity implements NavigationVie
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
         Intent intent;
+        System.out.println("EMAIL" + currentUser.getEmail());
+
         switch (menuItem.getItemId()) {
             case R.id.catalogoProductos:
                 intent = new Intent(this, CatalogoActivity.class);
@@ -122,6 +129,22 @@ public class CatalogoActivity extends AppCompatActivity implements NavigationVie
             case R.id.chat:
                 intent = new Intent(this, ChatVendedoresActivity.class);
                 startActivity(intent);
+                break;
+            case R.id.agregar:
+                if (currentUser.getEmail().equals(admin)) {
+                    intent = new Intent(this, AgregarProductoActivity.class);
+                    startActivity(intent);
+                } else {
+                    Toast.makeText(this, "opción de administrador no permitida", Toast.LENGTH_SHORT).show();
+                }
+                break;
+            case R.id.modificar:
+                if (currentUser.getEmail().equals(admin)) {
+                    intent = new Intent(this, ModificarProductoActivity.class);
+                    startActivity(intent);
+                } else {
+                    Toast.makeText(this, "opción de administrador no permitida", Toast.LENGTH_SHORT).show();
+                }
                 break;
             case R.id.salir:
                 mAuth.signOut();
