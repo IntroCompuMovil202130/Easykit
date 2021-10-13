@@ -21,161 +21,169 @@
             android:layout_height="?attr/actionBarSize"
             app:title="Actualizar Producto" />
 
-        <androidx.constraintlayout.widget.ConstraintLayout
+        <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:paddingStart="32dp"
-            android:paddingTop="16dp"
-            android:paddingEnd="32dp"
-            android:paddingBottom="16dp"
-            tools:context=".ModificarProductoActivity">
+            android:layout_height="match_parent">
 
-            <ImageView
-                android:id="@+id/IVBuscarTematicas"
-                android:layout_width="wrap_content"
-                android:layout_height="200dp"
-                android:layout_weight="1"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/kit" />
 
-            <LinearLayout
-                android:id="@+id/linearLayout7"
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:gravity="center"
-                android:orientation="horizontal"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/IVBuscarTematicas">
+                android:layout_height="match_parent"
+                android:paddingStart="32dp"
+                android:paddingTop="16dp"
+                android:paddingEnd="32dp"
+                android:paddingBottom="16dp"
+                tools:context=".ModificarProductoActivity">
 
-                <Button
-                    android:id="@+id/BTomarFotoModificar"
+                <ImageView
+                    android:id="@+id/IVBuscarTematicas"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="200dp"
                     android:layout_weight="1"
-                    android:background="@drawable/button_style"
-                    android:onClick="tomarFoto"
-                    android:text="@string/foto" />
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/kit" />
 
-                <View
-                    android:id="@+id/divider3"
-                    android:layout_width="1dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="0.2" />
-
-                <Button
-                    android:id="@+id/BElegirFotoModificar"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:background="@drawable/button_style"
-                    android:onClick="elegirFoto"
-                    android:text="@string/galeria" />
-            </LinearLayout>
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/TextInputLayout12"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="32dp"
-                android:hint="@string/name"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/linearLayout7"
-                app:startIconDrawable="@drawable/ic_baseline_text_fields_24">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/ETNombreProductoModificar"
+                <LinearLayout
+                    android:id="@+id/linearLayout7"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:inputType="textPersonName" />
+                    android:layout_marginTop="16dp"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/IVBuscarTematicas">
 
-            </com.google.android.material.textfield.TextInputLayout>
+                    <Button
+                        android:id="@+id/BTomarFotoModificar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/button_style"
+                        android:onClick="tomarFoto"
+                        android:text="@string/foto" />
 
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/TextInputLayout13"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:hint="@string/description"
-                app:layout_constraintStart_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/TextInputLayout12"
-                app:startIconDrawable="@drawable/ic_baseline_text_fields_24">
+                    <View
+                        android:id="@+id/divider3"
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.2" />
 
+                    <Button
+                        android:id="@+id/BElegirFotoModificar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/button_style"
+                        android:onClick="elegirFoto"
+                        android:text="@string/galeria" />
+                </LinearLayout>
 
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/ETDescripcionModificar"
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/TextInputLayout12"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:inputType="textMultiLine" />
+                    android:layout_marginTop="32dp"
+                    android:hint="@string/name"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/linearLayout7"
+                    app:startIconDrawable="@drawable/ic_baseline_text_fields_24">
 
-            </com.google.android.material.textfield.TextInputLayout>
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/ETNombreProductoModificar"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPersonName" />
 
-            <Spinner
-                android:id="@+id/STematicasModificar"
-                android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:layout_marginTop="16dp"
-                android:entries="@array/tematicas"
-                app:layout_constraintStart_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/TextInputLayout13" />
+                </com.google.android.material.textfield.TextInputLayout>
 
-            <LinearLayout
-                android:id="@+id/linearLayout6"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:orientation="horizontal"
-                app:layout_constraintStart_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/STematicasModificar">
-
-                <View
-                    android:id="@+id/divider4"
-                    android:layout_width="1dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="0.2" />
-
-                <TextView
-                    android:id="@+id/TVTematica4Tematicas"
-                    android:layout_width="wrap_content"
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/TextInputLayout13"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="@string/precio" />
+                    android:layout_marginTop="16dp"
+                    android:hint="@string/description"
+                    app:layout_constraintStart_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/TextInputLayout12"
+                    app:startIconDrawable="@drawable/ic_baseline_text_fields_24">
 
-                <EditText
-                    android:id="@+id/ETPrecioModificar"
-                    android:layout_width="wrap_content"
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/ETDescripcionModificar"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textMultiLine" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <Spinner
+                    android:id="@+id/STematicasModificar"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="16dp"
+                    android:entries="@array/tematicas"
+                    app:layout_constraintStart_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/TextInputLayout13" />
+
+                <LinearLayout
+                    android:id="@+id/linearLayout6"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="10"
-                    android:hint="@string/precio2"
-                    android:inputType="numberDecimal" />
-            </LinearLayout>
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal"
+                    app:layout_constraintStart_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/STematicasModificar">
+
+                    <View
+                        android:id="@+id/divider4"
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.2" />
+
+                    <TextView
+                        android:id="@+id/TVTematica4Tematicas"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/precio" />
+
+                    <EditText
+                        android:id="@+id/ETPrecioModificar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="10"
+                        android:hint="@string/precio2"
+                        android:inputType="numberDecimal" />
+                </LinearLayout>
 
 
-            <Button
-                android:id="@+id/BPublicarCatalogo"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:background="@drawable/button_style"
-                android:text="@string/button"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/linearLayout6" />
+                <Button
+                    android:id="@+id/BPublicarCatalogo"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:background="@drawable/button_style"
+                    android:text="@string/button"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/linearLayout6"
+                    app:layout_constraintVertical_bias="0.0" />
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </ScrollView>
 
     </LinearLayout>
 

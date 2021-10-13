@@ -1,13 +1,21 @@
 package com.example.adapters;
 
 import android.app.Activity;
+import android.content.ContentProvider;
+import android.content.ContentValues;
 import android.content.Context;
+import android.database.Cursor;
+import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.easykit.R;
 import com.example.models.Kit;
@@ -19,6 +27,7 @@ public class AdapterProducto extends BaseAdapter {
 
     protected Activity activity;
     protected List<Kit> items;
+
 
     public AdapterProducto (Activity activity, ArrayList<Kit> items) {
         this.activity = activity;
@@ -47,7 +56,7 @@ public class AdapterProducto extends BaseAdapter {
 
     @Override
     public long getItemId(int position) {
-        return position;
+        return 0;
     }
 
     @Override
@@ -69,11 +78,13 @@ public class AdapterProducto extends BaseAdapter {
         nombre.setText(dir.getNombre());
 
         TextView precio = (TextView) v.findViewById(R.id.precio);
-        precio.setText(dir.getPrecio());
+        precio.setText("Precio: $ " + String.valueOf(dir.getPrecio()));
 
         TextView descripcion = (TextView) v.findViewById(R.id.descripcion);
-        descripcion.setText(dir.getDescripcion());
+        descripcion.setText("Tema: " + dir.getDescripcion());
 
         return v;
     }
+
+
 }

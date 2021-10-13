@@ -10,7 +10,6 @@ public class Kit {
     private String descripcion;
     private Drawable imagen;
     private int precio;
-    
 
     public Kit() {
     }

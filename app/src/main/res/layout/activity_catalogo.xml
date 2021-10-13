@@ -17,209 +17,104 @@
         <com.google.android.material.appbar.MaterialToolbar
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize" />
+            android:layout_height="?attr/actionBarSize"
+            app:title="Catálogo" />
 
-        <androidx.constraintlayout.widget.ConstraintLayout
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingStart="32dp"
+            android:paddingTop="16dp"
+            android:paddingEnd="32dp"
+            android:paddingBottom="16dp"
             tools:context=".CatalogoActivity">
 
-            <ImageButton
-                android:id="@+id/botonTematicas"
-                android:layout_width="58dp"
-                android:layout_height="39dp"
-                android:layout_marginStart="28dp"
-                android:layout_marginTop="12dp"
-                android:onClick="mostrarTematicas"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/ETBuscarCatalogo"
-                app:srcCompat="@android:drawable/ic_menu_sort_by_size" />
-
-            <EditText
-                android:id="@+id/ETBuscarCatalogo"
-                android:layout_width="350dp"
-                android:layout_height="48dp"
-                android:layout_marginTop="24dp"
-                android:background="@drawable/button_style"
-                android:ems="10"
-                android:hint="@string/buscar"
-                android:inputType="textPersonName"
-                android:textAlignment="center"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.497"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <ImageView
-                android:id="@+id/IVBuscarCatalogo"
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:id="@+id/linearLayout9"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="28dp"
-                android:layout_marginTop="12dp"
-                app:layout_constraintStart_toStartOf="@+id/ETBuscarCatalogo"
-                app:layout_constraintTop_toTopOf="@+id/ETBuscarCatalogo"
-                app:srcCompat="?android:attr/actionModeWebSearchDrawable" />
-
-            <androidx.cardview.widget.CardView
-                android:id="@+id/cardView5"
-                android:layout_width="409dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
+                android:orientation="horizontal"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/botonTematicas">
+                app:layout_constraintTop_toTopOf="parent">
 
                 <ImageView
-                    android:id="@+id/IVProducto1Catalogo"
-                    android:layout_width="150dp"
-                    android:layout_height="100dp"
-                    android:layout_marginStart="44dp"
-                    android:layout_marginTop="15dp"
-                    android:layout_marginBottom="15dp"
-                    app:srcCompat="@drawable/kit1" />
+                    android:id="@+id/IVBuscarCatalogo"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    app:srcCompat="?android:attr/actionModeWebSearchDrawable" />
 
-                <TextView
-                    android:id="@+id/TVNombreProducto1Catalogo"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="220dp"
-                    android:layout_marginTop="30dp"
-                    android:text="@string/kit_escolar" />
+                <EditText
+                    android:id="@+id/ETBuscarCatalogo"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@drawable/button_style"
+                    android:ems="10"
+                    android:hint="@string/buscar"
+                    android:inputType="textPersonName"
+                    android:textAlignment="center" />
 
-                <TextView
-                    android:id="@+id/TVTema1Catalogo"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="220dp"
-                    android:layout_marginTop="60dp"
-                    android:text="@string/tema_colegio" />
+            </LinearLayout>
 
-                <Button
-                    android:id="@+id/BPrecio1Catalogo"
-                    android:layout_width="140dp"
-                    android:layout_height="37dp"
-                    android:layout_marginStart="250dp"
-                    android:layout_marginTop="85dp"
-                    android:onClick="detalle"
-                    android:text="@string/precio_35_000"
-                    android:textSize="10dp" />
-            </androidx.cardview.widget.CardView>
-
-            <androidx.cardview.widget.CardView
-                android:id="@+id/cardView6"
-                android:layout_width="409dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/cardView5">
-
-                <ImageView
-                    android:id="@+id/IVProducto2Catalogo"
-                    android:layout_width="150dp"
-                    android:layout_height="100dp"
-                    android:layout_marginStart="44dp"
-                    android:layout_marginTop="15dp"
-                    android:layout_marginBottom="15dp"
-                    app:srcCompat="@drawable/kit2" />
-
-                <TextView
-                    android:id="@+id/TVNombreProducto2Catalogo"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="220dp"
-                    android:layout_marginTop="30dp"
-                    android:text="@string/kit_marcadores" />
-
-                <TextView
-                    android:id="@+id/TVTema2Catalogo"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="220dp"
-                    android:layout_marginTop="60dp"
-                    android:text="@string/tema_manualidades" />
-
-                <Button
-                    android:id="@+id/BPrecio2Catalogo"
-                    android:layout_width="140dp"
-                    android:layout_height="37dp"
-                    android:layout_marginStart="250dp"
-                    android:layout_marginTop="85dp"
-                    android:onClick="detalle"
-                    android:text="@string/precio_55_000"
-                    android:textSize="10dp" />
-
-            </androidx.cardview.widget.CardView>
-
-            <androidx.cardview.widget.CardView
-                android:id="@+id/cardView7"
-                android:layout_width="409dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="28dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/cardView6">
-
-                <ImageView
-                    android:id="@+id/IVProducto3Catalogo"
-                    android:layout_width="150dp"
-                    android:layout_height="100dp"
-                    android:layout_marginStart="44dp"
-                    android:layout_marginTop="15dp"
-                    android:layout_marginBottom="15dp"
-                    app:srcCompat="@drawable/kit3" />
-
-                <TextView
-                    android:id="@+id/TVNombreProducto3Catalogo"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="220dp"
-                    android:layout_marginTop="30dp"
-                    android:text="@string/kit_marcadores" />
-
-                <TextView
-                    android:id="@+id/TVTema3Catalogo"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="220dp"
-                    android:layout_marginTop="60dp"
-                    android:text="@string/tema_manualidades" />
-
-                <Button
-                    android:id="@+id/BPrecio3Catalogo"
-                    android:layout_width="140dp"
-                    android:layout_height="37dp"
-                    android:layout_marginStart="250dp"
-                    android:layout_marginTop="85dp"
-                    android:onClick="detalle"
-                    android:text="@string/precio_45_500"
-                    android:textSize="10dp" />
-
-            </androidx.cardview.widget.CardView>
-
-            <Button
-                android:id="@+id/BAnteriorCatalogo"
+            <View
+                android:id="@+id/divider21"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="40dp"
-                android:background="@drawable/button_style"
-                android:text="@string/anterior"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/cardView7" />
+                android:layout_height="16dp" />
 
-            <Button
-                android:id="@+id/BSiguienteCatalogo"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="40dp"
-                android:background="@drawable/button_style"
-                android:text="@string/siguiente"
-                app:layout_constraintBottom_toBottomOf="parent"
+            <LinearLayout
+                android:id="@+id/linearLayout10"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.6"
+                android:orientation="vertical"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/cardView7" />
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout9">
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
+                <ListView
+                    android:id="@+id/LVlistaKits"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/divider22"
+                android:layout_width="match_parent"
+                android:layout_height="16dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout10">
+
+                <Button
+                    android:id="@+id/BAnteriorCatalogo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_style"
+                    android:text="@string/anterior" />
+
+                <View
+                    android:id="@+id/divider20"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.2"
+                    android:layout_width="0dp"/>
+
+                <Button
+                    android:id="@+id/BSiguienteCatalogo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_style"
+                    android:text="@string/siguiente" />
+            </LinearLayout>
+
+        </LinearLayout>
 
     </LinearLayout>
 
