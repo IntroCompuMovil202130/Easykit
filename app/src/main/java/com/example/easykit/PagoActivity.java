@@ -85,6 +85,14 @@ public class PagoActivity extends AppCompatActivity implements NavigationView.On
                 intent = new Intent(this, ChatVendedoresActivity.class);
                 startActivity(intent);
                 break;
+            case R.id.agregar:
+                intent = new Intent(this, AgregarProductoActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.modificar:
+                intent = new Intent(this, ModificarProductoActivity.class);
+                startActivity(intent);
+                break;
             case R.id.salir:
                 intent = new Intent(this, IngresoActivity.class);
                 startActivity(intent);

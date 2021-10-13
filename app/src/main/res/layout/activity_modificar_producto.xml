@@ -161,6 +161,7 @@
                             android:layout_marginTop="36dp"
                             android:layout_marginBottom="8dp"
                             android:background="@drawable/roundedbutton"
+                            android:onClick="tomarFotosM"
                             android:text="@string/foto" />
 
                         <Button
@@ -169,6 +170,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="12dp"
                             android:background="@drawable/roundedbutton"
+                            android:onClick="elegirFotosM"
                             android:text="@string/buttonQuitar" />
                     </LinearLayout>
 

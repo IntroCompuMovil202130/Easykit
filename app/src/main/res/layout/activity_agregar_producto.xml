@@ -159,20 +159,20 @@
                             android:id="@+id/tomarFoto"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_marginLeft="12dp"
+                            android:layout_marginStart="12dp"
                             android:layout_marginTop="36dp"
                             android:layout_marginBottom="8dp"
                             android:background="@drawable/roundedbutton"
-                            android:onClick="tomarFoto"
+                            android:onClick="tomarFotos"
                             android:text="@string/foto" />
 
                         <Button
                             android:id="@+id/elegirFoto"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_marginLeft="12dp"
+                            android:layout_marginStart="12dp"
                             android:background="@drawable/roundedbutton"
-                            android:onClick="elegirFoto"
+                            android:onClick="elegirFotos"
                             android:text="@string/galeria" />
                     </LinearLayout>
 

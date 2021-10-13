@@ -67,7 +67,7 @@ public class AgregarProductoActivity extends AppCompatActivity implements Naviga
 
     }
 
-    public void tomarFoto(View view){
+    public void tomarFotos(View view){
         if(ActivityCompat.checkSelfPermission(this,permisoCamara)!= PackageManager.PERMISSION_GRANTED){
             pedirPermiso(this,permisoCamara,"",idPermisoCamara);
         }else{
@@ -87,7 +87,7 @@ public class AgregarProductoActivity extends AppCompatActivity implements Naviga
         }
     }
 
-    public void elegirFoto(View view){
+    public void elegirFotos(View view){
         if(ActivityCompat.checkSelfPermission(this,permisoGaleria)!= PackageManager.PERMISSION_GRANTED){
             pedirPermiso(this,permisoGaleria,"",idPermisoGaleria);
         }else{
@@ -178,6 +178,14 @@ public class AgregarProductoActivity extends AppCompatActivity implements Naviga
                 break;
             case R.id.chat:
                 intent = new Intent(this, ChatVendedoresActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.agregar:
+                intent = new Intent(this, AgregarProductoActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.modificar:
+                intent = new Intent(this, ModificarProductoActivity.class);
                 startActivity(intent);
                 break;
             case R.id.salir:
