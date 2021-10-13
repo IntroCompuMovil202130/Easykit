@@ -98,6 +98,8 @@ public class UbicacionPedidoActivity extends FragmentActivity implements OnMapRe
     static final int REQUEST_CHECK_SETTINGS = 7;
     boolean isGPSEnabled = false;
 
+    boolean routecalculated = false;
+
     String locationPermission = Manifest.permission.ACCESS_FINE_LOCATION;
 
     //Sensor de luz
@@ -408,8 +410,8 @@ public class UbicacionPedidoActivity extends FragmentActivity implements OnMapRe
     @Override
     public void onRoutingSuccess(ArrayList<Route> route, int shortestRouteIndex) {
         CameraUpdate center = CameraUpdateFactory.newLatLng(actual);
-        CameraUpdate zoom = CameraUpdateFactory.zoomTo(16);
-        if(polylines!=null) {
+        //CameraUpdate zoom = CameraUpdateFactory.zoomTo(16);
+        if(routecalculated==true) {
             polylines.clear();
         }
         PolylineOptions polyOptions = new PolylineOptions();
@@ -438,7 +440,7 @@ public class UbicacionPedidoActivity extends FragmentActivity implements OnMapRe
             }
 
         }
-
+        routecalculated = true;
         //Add Marker on route starting position
 //        MarkerOptions startMarker = new MarkerOptions();
 //        startMarker.position(polylineStartLatLng);
