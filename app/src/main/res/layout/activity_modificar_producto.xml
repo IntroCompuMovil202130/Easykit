@@ -37,9 +37,11 @@
 
                 <ImageView
                     android:id="@+id/IVBuscarTematicas"
-                    android:layout_width="wrap_content"
+                    android:layout_width="300dp"
                     android:layout_height="200dp"
                     android:layout_weight="1"
+                    android:contentDescription="TODO"
+                    android:scaleType="fitCenter"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -64,7 +66,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:background="@drawable/button_style"
-                        android:onClick="tomarFoto"
+                        android:onClick="tomarFotosM"
                         android:text="@string/foto" />
 
                     <View
@@ -79,7 +81,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:background="@drawable/button_style"
-                        android:onClick="elegirFoto"
+                        android:onClick="elegirFotosM"
                         android:text="@string/galeria" />
                 </LinearLayout>
 

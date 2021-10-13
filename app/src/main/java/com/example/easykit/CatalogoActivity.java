@@ -2,11 +2,8 @@ package com.example.easykit;
 
 import android.content.Intent;
 import android.content.res.Resources;
-import android.graphics.Bitmap;
-import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
-import android.os.Handler;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -27,12 +24,10 @@ import com.example.adapters.AdapterProducto;
 import com.example.models.Kit;
 import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.auth.FirebaseAuth;
-import com.squareup.picasso.Picasso;
-import com.squareup.picasso.Target;
+import com.google.firebase.auth.FirebaseUser;
 
 import java.io.IOException;
 import java.util.ArrayList;
-import com.google.firebase.auth.FirebaseUser;
 
 public class CatalogoActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
     Button tematicas;
@@ -74,6 +69,8 @@ public class CatalogoActivity extends AppCompatActivity implements NavigationVie
         kits.add(new Kit(0, "Kit 1", "Kit #1", d, 15400));
         kits.add(new Kit(0, "Kit 2", "Kit #2", d, 15400));
         kits.add(new Kit(0, "Kit 3", "Kit #3", d, 15400));
+        kits.add(new Kit(0, "Kit 4", "Kit #4", d, 15400));
+        kits.add(new Kit(0, "Kit 5", "Kit #5", d, 15400));
 
         AdapterProducto adapterKit = new AdapterProducto(this, kits);
 

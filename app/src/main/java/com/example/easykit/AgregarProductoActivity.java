@@ -1,11 +1,9 @@
 package com.example.easykit;
 
-import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.Manifest;
 import android.app.Activity;
 import android.content.ActivityNotFoundException;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -13,16 +11,13 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.util.Log;
-import android.widget.ArrayAdapter;
-import android.widget.ImageView;
-import android.widget.Spinner;
-import android.content.Intent;
-import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -43,7 +38,7 @@ public class AgregarProductoActivity extends AppCompatActivity implements Naviga
     FirebaseUser currentUser;
     private FirebaseAuth mAuth;
 
-    String admin= "camicapi@gmail.com";
+    String admin = "camicapi@gmail.com";
     ImageView imagen;
     String permisoCamara = Manifest.permission.CAMERA;
     String permisoGaleria = Manifest.permission.READ_EXTERNAL_STORAGE;
@@ -69,62 +64,62 @@ public class AgregarProductoActivity extends AppCompatActivity implements Naviga
         NavigationView navigationView = findViewById(R.id.navigation_view);
         navigationView.setNavigationItemSelectedListener(this);
 
-        imagen=findViewById(R.id.IVBuscarTematicas);
+        imagen = findViewById(R.id.IVBuscarTematicas);
 
     }
 
-    public void tomarFotos(View view){
-        if(ActivityCompat.checkSelfPermission(this,permisoCamara)!= PackageManager.PERMISSION_GRANTED){
-            pedirPermiso(this,permisoCamara,"",idPermisoCamara);
-        }else{
+    public void tomarFotos(View view) {
+        if (ActivityCompat.checkSelfPermission(this, permisoCamara) != PackageManager.PERMISSION_GRANTED) {
+            pedirPermiso(this, permisoCamara, "", idPermisoCamara);
+        } else {
             imagenCamara();
         }
     }
 
-    private void imagenCamara(){
-        if(ActivityCompat.checkSelfPermission(this,permisoCamara)== PackageManager.PERMISSION_GRANTED){
-            Log.i("Permiso_APP","Dentro del método imagenCamara");
-            Intent tomarFotoIntent =new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-            try{
-                startActivityForResult(tomarFotoIntent,PERMISO_CAMARA);
-            } catch (ActivityNotFoundException exception){
-                Log.e("Permiso-App",exception.getMessage());
+    private void imagenCamara() {
+        if (ActivityCompat.checkSelfPermission(this, permisoCamara) == PackageManager.PERMISSION_GRANTED) {
+            Log.i("Permiso_APP", "Dentro del método imagenCamara");
+            Intent tomarFotoIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+            try {
+                startActivityForResult(tomarFotoIntent, PERMISO_CAMARA);
+            } catch (ActivityNotFoundException exception) {
+                Log.e("Permiso-App", exception.getMessage());
             }
         }
     }
 
-    public void elegirFotos(View view){
-        if(ActivityCompat.checkSelfPermission(this,permisoGaleria)!= PackageManager.PERMISSION_GRANTED){
-            pedirPermiso(this,permisoGaleria,"",idPermisoGaleria);
-        }else{
+    public void elegirFotos(View view) {
+        if (ActivityCompat.checkSelfPermission(this, permisoGaleria) != PackageManager.PERMISSION_GRANTED) {
+            pedirPermiso(this, permisoGaleria, "", idPermisoGaleria);
+        } else {
             imagenGaleria();
         }
     }
 
-    private void imagenGaleria(){
-        if(ActivityCompat.checkSelfPermission(this,permisoGaleria)==PackageManager.PERMISSION_GRANTED){
+    private void imagenGaleria() {
+        if (ActivityCompat.checkSelfPermission(this, permisoGaleria) == PackageManager.PERMISSION_GRANTED) {
             Intent seleccionarImagen = new Intent(Intent.ACTION_PICK);
             seleccionarImagen.setType("image/*");
             startActivityForResult(seleccionarImagen, SELECCIONAR_IMAGEN_PERMISO);
         }
     }
 
-    private void pedirPermiso(Activity contexto, String permiso, String justificacion, int id){
-        if(ActivityCompat.checkSelfPermission(contexto,permiso)!=PackageManager.PERMISSION_GRANTED){
-            if(ActivityCompat.shouldShowRequestPermissionRationale(contexto,permiso)){
-                Toast.makeText(contexto,justificacion,Toast.LENGTH_SHORT).show();
+    private void pedirPermiso(Activity contexto, String permiso, String justificacion, int id) {
+        if (ActivityCompat.checkSelfPermission(contexto, permiso) != PackageManager.PERMISSION_GRANTED) {
+            if (ActivityCompat.shouldShowRequestPermissionRationale(contexto, permiso)) {
+                Toast.makeText(contexto, justificacion, Toast.LENGTH_SHORT).show();
             }
             //Pedir permiso
-            ActivityCompat.requestPermissions(contexto,new String[]{permiso},id);
+            ActivityCompat.requestPermissions(contexto, new String[]{permiso}, id);
         }
     }
 
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
-        if(requestCode == idPermisoCamara){
+        if (requestCode == idPermisoCamara) {
             imagenCamara();
-        } else if(requestCode == idPermisoGaleria){
+        } else if (requestCode == idPermisoGaleria) {
             imagenGaleria();
         }
     }
@@ -132,12 +127,12 @@ public class AgregarProductoActivity extends AppCompatActivity implements Naviga
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        switch (requestCode){
+        switch (requestCode) {
             case SELECCIONAR_IMAGEN_PERMISO:
-                if (resultCode == RESULT_OK){
+                if (resultCode == RESULT_OK) {
                     try {
                         final Uri imageUri = data.getData();
-                        final InputStream imageStream =getContentResolver().openInputStream(imageUri);
+                        final InputStream imageStream = getContentResolver().openInputStream(imageUri);
                         final Bitmap imagenSeleccionada = BitmapFactory.decodeStream(imageStream);
                         imagen.setImageBitmap(imagenSeleccionada);
                     } catch (FileNotFoundException e) {
@@ -146,13 +141,14 @@ public class AgregarProductoActivity extends AppCompatActivity implements Naviga
                 }
                 break;
             case PERMISO_CAMARA:
-                if(resultCode == RESULT_OK){
-                    Bundle extras =data.getExtras();
+                if (resultCode == RESULT_OK) {
+                    Bundle extras = data.getExtras();
                     Bitmap imageBitmap = (Bitmap) extras.get("data");
                     imagen.setImageBitmap(imageBitmap);
                 }
         }
     }
+
     @Override
     public void onBackPressed() {
         if (drawerLayout.isDrawerOpen(GravityCompat.START)) {
@@ -179,7 +175,7 @@ public class AgregarProductoActivity extends AppCompatActivity implements Naviga
                 startActivity(intent);
                 break;
             case R.id.ubicacion:
-                intent = new Intent(this, UbicacionTiendaActivity.class);
+                intent = new Intent(this, UbicacionPedidoActivity.class);
                 startActivity(intent);
                 break;
             case R.id.chat:
@@ -187,19 +183,19 @@ public class AgregarProductoActivity extends AppCompatActivity implements Naviga
                 startActivity(intent);
                 break;
             case R.id.agregar:
-                if(currentUser.getEmail().equals(admin)){
+                if (currentUser.getEmail().equals(admin)) {
                     intent = new Intent(this, AgregarProductoActivity.class);
                     startActivity(intent);
-                }else{
-                    Toast.makeText(this,"opción de administrador no permitida",Toast.LENGTH_SHORT).show();
+                } else {
+                    Toast.makeText(this, "opción de administrador no permitida", Toast.LENGTH_SHORT).show();
                 }
                 break;
             case R.id.modificar:
-                if(currentUser.getEmail().equals(admin)){
+                if (currentUser.getEmail().equals(admin)) {
                     intent = new Intent(this, ModificarProductoActivity.class);
                     startActivity(intent);
-                }else{
-                    Toast.makeText(this,"opción de administrador no permitida",Toast.LENGTH_SHORT).show();
+                } else {
+                    Toast.makeText(this, "opción de administrador no permitida", Toast.LENGTH_SHORT).show();
                 }
                 break;
             case R.id.salir:
@@ -211,7 +207,6 @@ public class AgregarProductoActivity extends AppCompatActivity implements Naviga
 
         return true;
     }
-
 
 
 }

@@ -52,7 +52,7 @@
         android:checkableBehavior="single">
         <item
             android:id="@+id/agregar"
-            android:icon="@drawable/ic_chat"
+            android:icon="@drawable/ic_baseline_add_24"
             android:title="Agregar"
             app:showAsAction="never" />
     </group>
@@ -61,7 +61,7 @@
         android:checkableBehavior="single">
         <item
             android:id="@+id/modificar"
-            android:icon="@drawable/ic_chat"
+            android:icon="@drawable/ic_baseline_brush_24"
             android:title="Modificar"
             app:showAsAction="never" />
     </group>

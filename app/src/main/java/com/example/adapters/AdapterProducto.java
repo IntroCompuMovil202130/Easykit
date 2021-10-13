@@ -1,21 +1,13 @@
 package com.example.adapters;
 
 import android.app.Activity;
-import android.content.ContentProvider;
-import android.content.ContentValues;
 import android.content.Context;
-import android.database.Cursor;
-import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
-
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.easykit.R;
 import com.example.models.Kit;
@@ -29,7 +21,7 @@ public class AdapterProducto extends BaseAdapter {
     protected List<Kit> items;
 
 
-    public AdapterProducto (Activity activity, ArrayList<Kit> items) {
+    public AdapterProducto(Activity activity, ArrayList<Kit> items) {
         this.activity = activity;
         this.items = items;
     }

@@ -1,11 +1,9 @@
 package com.example.easykit;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
-import android.view.View;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
@@ -18,16 +16,14 @@ import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
-import android.os.Bundle;
-import android.widget.Toast;
-
 public class ActualizarPerfilActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
     private DrawerLayout drawerLayout;
     private FirebaseAuth mAuth;
 
     FirebaseUser currentUser;
-    String admin= "camicapi@gmail.com";
+    String admin = "camicapi@gmail.com";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -43,7 +39,7 @@ public class ActualizarPerfilActivity extends AppCompatActivity implements Navig
         toggle.syncState();
         NavigationView navigationView = findViewById(R.id.navigation_view);
         navigationView.setNavigationItemSelectedListener(this);
-        
+
     }
 
     @Override
@@ -72,7 +68,7 @@ public class ActualizarPerfilActivity extends AppCompatActivity implements Navig
                 startActivity(intent);
                 break;
             case R.id.ubicacion:
-                intent = new Intent(this, UbicacionTiendaActivity.class);
+                intent = new Intent(this, UbicacionPedidoActivity.class);
                 startActivity(intent);
                 break;
             case R.id.chat:
@@ -80,19 +76,19 @@ public class ActualizarPerfilActivity extends AppCompatActivity implements Navig
                 startActivity(intent);
                 break;
             case R.id.agregar:
-                if(currentUser.getEmail().equals(admin)){
+                if (currentUser.getEmail().equals(admin)) {
                     intent = new Intent(this, AgregarProductoActivity.class);
                     startActivity(intent);
-                }else{
-                    Toast.makeText(this,"opción de administrador no permitida",Toast.LENGTH_SHORT).show();
+                } else {
+                    Toast.makeText(this, "opción de administrador no permitida", Toast.LENGTH_SHORT).show();
                 }
                 break;
             case R.id.modificar:
-                if(currentUser.getEmail().equals(admin)){
+                if (currentUser.getEmail().equals(admin)) {
                     intent = new Intent(this, ModificarProductoActivity.class);
                     startActivity(intent);
-                }else{
-                    Toast.makeText(this,"opción de administrador no permitida",Toast.LENGTH_SHORT).show();
+                } else {
+                    Toast.makeText(this, "opción de administrador no permitida", Toast.LENGTH_SHORT).show();
                 }
                 break;
             case R.id.salir:

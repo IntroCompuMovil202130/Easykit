@@ -1,6 +1,7 @@
 package com.example.easykit;
 
 import androidx.appcompat.app.AppCompatActivity;
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
@@ -26,7 +27,8 @@ public class ChatVendedoresActivity extends AppCompatActivity implements Navigat
     FirebaseUser currentUser;
     private FirebaseAuth mAuth;
 
-    String admin= "camicapi@gmail.com";
+    String admin = "camicapi@gmail.com";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -42,7 +44,7 @@ public class ChatVendedoresActivity extends AppCompatActivity implements Navigat
         toggle.syncState();
         NavigationView navigationView = findViewById(R.id.navigation_view);
         navigationView.setNavigationItemSelectedListener(this);
-        
+
     }
 
     @Override
@@ -71,7 +73,7 @@ public class ChatVendedoresActivity extends AppCompatActivity implements Navigat
                 startActivity(intent);
                 break;
             case R.id.ubicacion:
-                intent = new Intent(this, UbicacionTiendaActivity.class);
+                intent = new Intent(this, UbicacionPedidoActivity.class);
                 startActivity(intent);
                 break;
             case R.id.chat:
@@ -79,19 +81,19 @@ public class ChatVendedoresActivity extends AppCompatActivity implements Navigat
                 startActivity(intent);
                 break;
             case R.id.agregar:
-                if(currentUser.getEmail().equals(admin)){
+                if (currentUser.getEmail().equals(admin)) {
                     intent = new Intent(this, AgregarProductoActivity.class);
                     startActivity(intent);
-                }else{
-                    Toast.makeText(this,"opción de administrador no permitida",Toast.LENGTH_SHORT).show();
+                } else {
+                    Toast.makeText(this, "opción de administrador no permitida", Toast.LENGTH_SHORT).show();
                 }
                 break;
             case R.id.modificar:
-                if(currentUser.getEmail().equals(admin)){
+                if (currentUser.getEmail().equals(admin)) {
                     intent = new Intent(this, ModificarProductoActivity.class);
                     startActivity(intent);
-                }else{
-                    Toast.makeText(this,"opción de administrador no permitida",Toast.LENGTH_SHORT).show();
+                } else {
+                    Toast.makeText(this, "opción de administrador no permitida", Toast.LENGTH_SHORT).show();
                 }
                 break;
             case R.id.salir:
@@ -103,7 +105,6 @@ public class ChatVendedoresActivity extends AppCompatActivity implements Navigat
 
         return true;
     }
-
 
 
 }
