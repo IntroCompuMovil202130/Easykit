@@ -15,11 +15,22 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageReference;
 
 public class ActualizarPerfilActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
     private DrawerLayout drawerLayout;
     private FirebaseAuth mAuth;
+
+    private FirebaseDatabase database;
+    private DatabaseReference myRef;
+    private ValueEventListener listener;
+    private FirebaseStorage storage;
+    private StorageReference mStorageRef;
 
     FirebaseUser currentUser;
     String admin = "camicapi@gmail.com";
