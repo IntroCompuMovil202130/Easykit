@@ -15,6 +15,7 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
+import com.example.models.Usuario;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.android.material.navigation.NavigationView;
@@ -28,9 +29,12 @@ import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
+import com.google.firebase.firestore.SetOptions;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 
+import java.util.HashMap;
+import java.util.Map;
 import java.util.StringTokenizer;
 
 public class ActualizarPerfilActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
@@ -96,10 +100,10 @@ public class ActualizarPerfilActivity extends AppCompatActivity implements Navig
                         apellido.setText(result[0].substring(10,result[0].length()));
                         nombre.setText(result[3].substring(8,result[3].length()));
                         correo.setText(result[4].substring(7,result[4].length()-1));
-                        for (int x=0; x<result.length; x++){
-                            System.out.println(result[x]);
-                            Log.d("HOLABUENAS", result[x]);
-                        }
+//                        for (int x=0; x<result.length; x++){
+//                            System.out.println(result[x]);
+//                            Log.d("HOLABUENAS", result[x]);
+//                        }
 
                     } else {
                         Log.d("HOLABUENAS", "No such document");
@@ -111,6 +115,65 @@ public class ActualizarPerfilActivity extends AppCompatActivity implements Navig
         });
 
 
+    }
+
+    public void cambiarDatos(View v){
+        Usuario usuario = new Usuario();
+        DocumentReference docRef = db.collection("usuarios").document(currentUser.getUid());
+        Task<DocumentSnapshot> task = docRef.get();
+        DocumentSnapshot document = task.getResult();
+        String[] result = document.getData().toString().split("\\,");
+                        usuario.setApellido(apellido.getText().toString());
+                        usuario.setNombre(nombre.getText().toString());
+                        usuario.setEmail(correo.getText().toString());
+                        String pass = String.valueOf(contrasena.getText());
+                        String verPass = String.valueOf(verificarContrasena.getText());
+                        if(pass.equals(verPass) && pass!="")
+                            usuario.setPassword(pass);
+                        for (int x=0; x<result.length; x++){
+                            System.out.println(result[x]);
+                            Log.d("HOLABUENAS", result[x]);
+                        }
+//        docRef.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
+//            @Override
+//            public void onComplete(@NonNull Task<DocumentSnapshot> task) {
+//                if (task.isSuccessful()) {
+//                    DocumentSnapshot document = task.getResult();
+//                    if (document.exists()) {
+////                        Log.d("HOLABUENAS", "DocumentSnapshot data: " + document.getData());
+//                        String[] result = document.getData().toString().split("\\,");
+//                        usuario.setApellido(result[0].substring(10,result[0].length()));
+//                        usuario.setNombre(result[3].substring(8,result[3].length()));
+//                        usuario.setEmail(result[4].substring(7,result[4].length()-1));
+//                        String pass = String.valueOf(contrasena.getText());
+//                        String verPass = String.valueOf(verificarContrasena.getText());
+//                        if(pass.equals(verPass))
+//                            usuario.setPassword(pass);
+//                        for (int x=0; x<result.length; x++){
+//                            System.out.println(result[x]);
+//                            Log.d("HOLABUENAS", result[x]);
+//                        }
+//
+//                    } else {
+//                        Log.d("HOLABUENAS", "No such document");
+//                    }
+//                } else {
+//                    Log.d("HOLABUENAS", "get failed with ", task.getException());
+//                }
+//            }
+//        });
+
+        Map<String, Object> docData = new HashMap<>();
+        docData.put("id", currentUser.getUid());
+        docData.put("nombre", usuario.getNombre());
+        docData.put("apellido", usuario.getApellido());
+        docData.put("email", usuario.getEmail());
+        docData.put("isAdmin", false);
+
+        db.collection("usuarios").document(currentUser.getUid()).delete();
+        db              .collection("usuarios")
+                .document(currentUser.getUid())
+                .set(docData, SetOptions.merge());
     }
 
     @Override
