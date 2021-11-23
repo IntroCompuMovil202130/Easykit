@@ -43,6 +43,7 @@ public class RegistroActivity extends AppCompatActivity {
     FirebaseStorage storage;
     StorageReference mStorageRef;
     FirebaseFirestore db;
+    FirebaseUser currentUser;
     public static final String PATH_USERS = "usuarios/";
 
     @Override
@@ -91,10 +92,7 @@ public class RegistroActivity extends AppCompatActivity {
                         db              .collection("usuarios")
                                         .document(user.getUid())
                                         .set(docData, SetOptions.merge());
-//                     
 
-//                        myRef = database.getReference(PATH_USERS+ user.getUid());
-//                        myRef.setValue(usuario);
 
                         UserProfileChangeRequest.Builder upcrb = new UserProfileChangeRequest.Builder();
                         upcrb.setDisplayName(correo);
@@ -105,9 +103,6 @@ public class RegistroActivity extends AppCompatActivity {
             }
         });
 
-
-//        Intent intent = new Intent(this, AutenticacionActivity.class);
-//        startActivity(intent);
     }
 
     private void updateUI(FirebaseUser currentUser){
